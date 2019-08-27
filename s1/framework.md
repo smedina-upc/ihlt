@@ -233,7 +233,7 @@ Both Linux & Windows (via python shell)
 ```
 
 #### Attached resources:
-[`pg35688.txt`](pg35688)
+[`pg35688.txt`](pg35688.txt)
 
 ---
 class: left, middle, inverse
@@ -293,7 +293,10 @@ txt = nltk.corpus.gutenberg.words('austen-persuasion.txt')
 ```
 
 Example of *Corpus reader* using the *Gutenberg corpora*: <br>
-[corpus.ipynb](corpus.ipynb)
+
+* [view](corpus.html)
+
+* [download](corpus.ipynb)
 
 ---
 
