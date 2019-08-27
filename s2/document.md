@@ -68,9 +68,7 @@ class: left, middle, inverse
 
 Getting raw text from HTML:
 
-* [view](codes/html.html)
-
-* [download](codes/html.ipynb)
+* Example: [view](codes/html.html) / [download](codes/html.ipynb)
 
 [Beautiful Soup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/) also allows to treat HTML in all forms:
 
@@ -125,7 +123,7 @@ class: left, middle, inverse
 
 # Text level in *nltk* library
 
-* Standard functions for [tokenization](http://www.nltk.org/ modules/nltk/tokenize.html) (recommended by *nltk*):
+* Standard functions for [tokenization](http://www.nltk.org/_modules/nltk/tokenize.html) (recommended by *nltk*):
 
   - Sentence splitting: <br>
 `s_list = nltk.sent_tokenize(T, [language='LANG'])`
@@ -189,9 +187,6 @@ prepare the exercise.
 
 * Justify the answer.
 
-⚠️ 
-👉
-❌
 
 
 
