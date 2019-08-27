@@ -233,7 +233,7 @@ Both Linux & Windows (via python shell)
 ```
 
 #### Attached resources:
-[`pg35688.txt`](pg35688.txt)
+[`pg35688.txt`](resources/pg35688.txt)
 
 ---
 class: left, middle, inverse
@@ -292,17 +292,91 @@ nltk.corpus.gutenberg.fileids()
 txt = nltk.corpus.gutenberg.words('austen-persuasion.txt')
 ```
 
-Example of *Corpus reader* using the *Gutenberg corpora*: <br>
+Example of *Corpus reader* using the *Gutenberg corpora*: 
 
-* [view](corpus.html)
+* [view](codes/corpus.html)
 
-* [download](corpus.ipynb)
+* [download](codes/corpus.ipynb)
 
 ---
 
-⚠️ 
-👉
-❌
+# Stopwords reader
 
+Provide the list of stop words of a specific language. 
 
+Words that do not have individual meaning 
+* pronouns
+* determiners
+* auxiliary verbs
+* ...
+
+Example of *Stopwords reader*:
+
+* [view](codes/stopwords.html)
+
+* [download](codes/stopwords.ipynb)
+
+---
+
+# Session exercise
+
+1. Develop a jupyter notebook that show the 25
+non-stopwords with more number of occurrences in the file
+'blake-poems.txt' of Gutenberg corpus.
+
+Upload the jupyter file of the exercise to the Raco.
+
+---
+class: left, middle, inverse
+
+# Outline
+
+* .brown[Presentation]
+
+* .brown[Session requirements]
+
+* .brown[Framework]
+
+* .cyan[Additional information]
+
+---
+
+# Class Text
+
+It allows:
+
+* Consulting occurrences of words
+
+* Consulting contexts
+
+* Drawing dispersion plots
+
+Example of *Class Text*:
+
+* [view](codes/text.html)
+
+* [download](codes/text.ipynb)
+
+---
+
+.col5050[
+.col1[
+## Plain Text
+
+Loading corpus from a text file:
+
+* [view](codes/plain.html)
+
+* [download](codes/plain.ipynb)
+]
+.col2[
+## Web Example
+
+Fetching web data as string: 
+
+* [view](codes/web.html)
+
+* [download](codes/web.ipynb)
+]
+]
 

@@ -4,6 +4,8 @@
 
 1. [Framework](s1/index.html)
 
+2. [Document structure](s2/index.html)
+
 ## Blocks
 
 ### Autors
