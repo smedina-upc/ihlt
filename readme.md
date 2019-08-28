@@ -1,5 +1,7 @@
 # IHLT: Laboratory
 
+.col5050[
+.col1[
 ## Sessions
 
 1. [Framework](s1/index.html)
@@ -8,11 +10,35 @@
 
 3. Morphology
 
+4. Part of Speech
+
+5. Lexical Semantics
+
+6. Word Sense Disambiguation
+
+7. Name Entities
+
+8. Parsing
+
+9. Coreference
+]
+.col2[
 ## Blocks
 
 * [Text Level](b1/index.html)
 
+* Lexical Level
+
+* Sequence Level
+
+## Project
+
+* Semantic Textual Similarity
+
 ### Autors
 
-Gerard Escudero i Jordi Turmo
+Gerard Escudero
 
+Jordi Turmo
+]
+]
