@@ -6,6 +6,8 @@
 
 2. [Document structure](s2/index.html)
 
+3. Morphology
+
 ## Blocks
 
 * [Text Level](b1/index.html)
