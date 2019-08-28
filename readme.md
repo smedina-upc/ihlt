@@ -10,7 +10,7 @@
 
 3. [Morphology](s3/index.html)
 
-4. Part of Speech
+4. [Part of Speech](s4/index.html)
 
 5. Lexical Semantics
 
