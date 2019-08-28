@@ -8,6 +8,8 @@
 
 ## Blocks
 
+* [Text Level](b1/index.html)
+
 ### Autors
 
 Gerard Escudero i Jordi Turmo
