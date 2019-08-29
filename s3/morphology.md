@@ -38,7 +38,7 @@ PoS tagger & lemmatizer:
 ```python3
 import nltk
 
-nltk.download('averaged perceptron tagger')
+nltk.download('averaged_perceptron_tagger')
 
 nltk.download('wordnet')
 ```
