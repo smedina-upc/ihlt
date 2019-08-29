@@ -85,6 +85,7 @@ Example:
 * [view](codes/similarities.html) / [download](codes/similarities.ipynb)
 
 ---
+class: left, middle, inverse
 
 # Outline
 
