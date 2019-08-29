@@ -294,9 +294,7 @@ txt = nltk.corpus.gutenberg.words('austen-persuasion.txt')
 
 Example of *Corpus reader* using the *Gutenberg corpora*: 
 
-* [view](codes/corpus.html)
-
-* [download](codes/corpus.ipynb)
+* [view](codes/corpus.html) / [download](codes/corpus.ipynb)
 
 ---
 
@@ -312,9 +310,7 @@ Words that do not have individual meaning
 
 Example of *Stopwords reader*:
 
-* [view](codes/stopwords.html)
-
-* [download](codes/stopwords.ipynb)
+* [view](codes/stopwords.html) / [download](codes/stopwords.ipynb)
 
 ---
 
@@ -353,11 +349,8 @@ It allows:
 
 Example of *Class Text*:
 
-* [view](codes/text.html)
+* [view](codes/text.html) / [download](codes/text.ipynb)
 
-* [download](codes/text.ipynb)
-
----
 
 .col5050[
 .col1[
@@ -365,18 +358,14 @@ Example of *Class Text*:
 
 Loading corpus from a text file:
 
-* [view](codes/plain.html)
-
-* [download](codes/plain.ipynb)
+* [view](codes/plain.html) / [download](codes/plain.ipynb)
 ]
 .col2[
 ## Web Example
 
 Fetching web data as string: 
 
-* [view](codes/web.html)
-
-* [download](codes/web.ipynb)
+* [view](codes/web.html) / [download](codes/web.ipynb)
 ]
 ]
 
