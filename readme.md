@@ -18,7 +18,7 @@
 
 7. [Word Sequences](s7/index.html)
 
-8. Parsing
+8. [Parsing](s8/index.html)
 
 9. Coreference
 ]
