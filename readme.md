@@ -20,7 +20,7 @@
 
 8. [Parsing](s8/index.html)
 
-9. Coreference
+9. [Coreference](s9/index.html)
 ]
 .col2[
 ## Blocks
