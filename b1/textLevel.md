@@ -61,7 +61,13 @@ Example of accuracy and confusion matrix:
 
 ---
 
-# Statement
+# Language Identification
+
+#### Resources
+
+* [langId.zip](resources/langId.zip)
+
+#### Statement
 
 * Implement a language identifier for the European languages: 
 
