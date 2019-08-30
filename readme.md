@@ -27,7 +27,7 @@
 
 * [Text Level](b1/index.html)
 
-* Lexical Level
+* [Lexical Level](b2/index.html)
 
 * Sequence Level
 
