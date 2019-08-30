@@ -14,7 +14,7 @@
 
 5. [Lexical Semantics](s5/index.html)
 
-6. Word Sense Disambiguation
+6. [Word Sense Disambiguation](s6/index.html)
 
 7. Name Entities
 
