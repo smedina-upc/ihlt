@@ -16,7 +16,7 @@
 
 6. [Word Sense Disambiguation](s6/index.html)
 
-7. Name Entities
+7. [Word Sequences](s7/index.html)
 
 8. Parsing
 
