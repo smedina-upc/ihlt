@@ -21,7 +21,7 @@ Natural Language Research Group
 
 #### CoreNLP coreference example:
 
-* [view](codes/coreference.html) / [download](codes/coreference.ipynb)
+* [view](codes/coref.html) / [download](codes/coref.ipynb)
 
 ---
 

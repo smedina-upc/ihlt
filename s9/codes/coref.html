@@ -2,7 +2,7 @@
 <html>
 <head><meta charset="utf-8" />
 
-<title>coreference</title>
+<title>coref</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -13215,55 +13215,6 @@ div#notebook {
 	 Michelle FEMALE SINGULAR True PROPER
 	 his MALE SINGULAR False PRONOMINAL
 	 He MALE SINGULAR False PRONOMINAL
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;Alice was beginning to get very tired of sitting by her sister on the</span>
-<span class="s2">bank, and of having nothing to do: once or twice she had peeped into the</span>
-<span class="s2">book her sister was reading, but it had no pictures or conversations in</span>
-<span class="s2">it, ‘and what is the use of a book,’ thought Alice ‘without pictures or</span>
-<span class="s2">conversations?’&quot;&quot;&quot;</span>
-<span class="n">res4</span> <span class="o">=</span> <span class="n">tagger</span><span class="o">.</span><span class="n">api_call</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
-<span class="n">show</span><span class="p">(</span><span class="n">res4</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Chain 1 :
-	 the book her sister was reading NEUTRAL SINGULAR True NOMINAL
-	 it NEUTRAL SINGULAR False PRONOMINAL
-	 it NEUTRAL SINGULAR False PRONOMINAL
-Chain 2 :
-	 Alice FEMALE SINGULAR False PROPER
-	 her FEMALE SINGULAR False PRONOMINAL
-	 she FEMALE SINGULAR False PRONOMINAL
-	 her FEMALE SINGULAR False PRONOMINAL
-	 Alice ` without pictures or conversations FEMALE SINGULAR True PROPER
-Chain 3 :
-	 her sister FEMALE SINGULAR True NOMINAL
-	 her sister FEMALE SINGULAR False NOMINAL
 </pre>
 </div>
 </div>
