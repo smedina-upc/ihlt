@@ -33,7 +33,7 @@
 
 ## Project
 
-* Semantic Textual Similarity
+* [Semantic Textual Similarity](sts/index.html)
 
 ### Autors
 
