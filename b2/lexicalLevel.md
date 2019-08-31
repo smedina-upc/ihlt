@@ -145,15 +145,70 @@ class: left, middle, inverse
 
 ---
 
-# Approaches
+# Approaches I
 
 * Adapting ML algorithms to the problem 
 
   - *k Nearest Neighbors* + *jaccard* distance
 
+```python3
+## data format
+('ham', ['released', 'another', 'italian', 'one', 'today', 'cosign', 'option'])
+
+## knn + jaccard
+from nltk.metrics.distance import jaccard_distance
+def jaccard(a, b):
+    return jaccard_distance(set(a), set(b))
+
+def kNN(train, exTest):
+    return min(train,key=lambda x: jaccard(exTest[1], x[1]))[0]
+```
+
 * Text categorization in *sklearn*
 
-* Example: [view](codes/sms.html) / [download](codes/sms.ipynb)
+```python3
+# bag of words
+from sklearn.feature_extraction.text import CountVectorizer
+cv = CountVectorizer()
+Xtrn = cv.fit_transform([' '.join(ex[1]) for ex in train])
+Xtst = cv.transform([' '.join(ex[1]) for ex in test])
+Ytrn = [ex[0] for ex in train]
+Ytst = [ex[0] for ex in test]
+```
+
+---
+
+# Approaches II
+
+* Text categorization in *sklearn*
+
+```python3
+# knn
+from sklearn.neighbors import KNeighborsClassifier
+clf = KNeighborsClassifier(1)
+clf.fit(Xtrn, Ytrn)
+preds = clf.predict(Xtst).tolist()
+round(accuracy(refs, preds), 3)
+# output
+0.94
+
+# confusion matrix
+print(ConfusionMatrix(refs, preds).pretty_format())
+# output
+     |         s |
+     |    h    p |
+     |    a    a |
+     |    m    m |
+-----+-----------+
+ ham |<2415>   2 |
+spam |  172 <198>|
+-----+-----------+
+(row = reference; col = test)
+```
+
+---
+
+# Approaches III
 
 * Support Vector Machines
 
