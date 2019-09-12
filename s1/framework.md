@@ -4,7 +4,7 @@ class: center, middle
 
 # Lab.1: Framework
 
-Gerard Escudero i Jordi Turmo
+Gerard Escudero & Jordi Turmo
 
 Natural Language Research Group
 
@@ -22,6 +22,8 @@ class: left, middle, inverse
 # Outline
 
 * .cyan[Presentation]
+
+* Software platform
 
 * Session requirements
 
@@ -137,6 +139,21 @@ among them and among the official results.
   - Chunking
 
 ---
+class: left, middle, inverse
+
+# Outline
+
+* .brown[Presentation]
+
+* .cyan[Software platform]
+
+* Session requirements
+
+* Framework
+
+* Additional information
+
+---
 
 # Framework installation (Linux)
 
@@ -211,6 +228,8 @@ class: left, middle, inverse
 
 * .brown[Presentation]
 
+* .brown[Software platform]
+
 * .cyan[Session requirements]
 
 * Framework
@@ -241,6 +260,8 @@ class: left, middle, inverse
 # Outline
 
 * .brown[Presentation]
+
+* .brown[Software platform]
 
 * .brown[Session requirements]
 
@@ -328,6 +349,8 @@ class: left, middle, inverse
 # Outline
 
 * .brown[Presentation]
+
+* .brown[Software platform]
 
 * .brown[Session requirements]
 
