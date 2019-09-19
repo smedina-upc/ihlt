@@ -4,7 +4,7 @@ class: center, middle
 
 # Lab.6: Word Sense Disambiguation
 
-Gerard Escudero i Jordi Turmo
+Gerard Escudero & Jordi Turmo
 
 Natural Language Research Group
 

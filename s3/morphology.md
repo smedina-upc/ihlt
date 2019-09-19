@@ -4,7 +4,7 @@ class: center, middle
 
 # Lab.3: Morphology
 
-Gerard Escudero i Jordi Turmo
+Gerard Escudero & Jordi Turmo
 
 Natural Language Research Group
 

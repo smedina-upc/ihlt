@@ -4,7 +4,7 @@ class: center, middle
 
 # Lab.4: Part of Speech
 
-Gerard Escudero i Jordi Turmo
+Gerard Escudero & Jordi Turmo
 
 Natural Language Research Group
 

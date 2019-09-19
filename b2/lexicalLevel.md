@@ -4,6 +4,10 @@ class: center, middle
 
 # Lab Blocks: Lexical Level
 
+Gerard Escudero
+
+Natural Language Research Group
+
 ## Master on Artificial Intelligence
 
 <br>

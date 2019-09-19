@@ -4,7 +4,7 @@ class: center, middle
 
 # Lab.9: Coreference
 
-Gerard Escudero i Jordi Turmo
+Gerard Escudero & Jordi Turmo
 
 Natural Language Research Group
 

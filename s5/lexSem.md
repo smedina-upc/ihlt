@@ -4,7 +4,7 @@ class: center, middle
 
 # Lab.5: Lexical Semantics
 
-Gerard Escudero i Jordi Turmo
+Gerard Escudero & Jordi Turmo
 
 Natural Language Research Group
 
