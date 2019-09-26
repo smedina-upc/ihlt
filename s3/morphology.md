@@ -71,6 +71,8 @@ class: left, middle, inverse
 * POS tags <br>
 `t_POS_list = nltk.pos_tag(t_list)`
 
+[Penn Treebank Tag Set](https://www.ling.upenn.edu/courses/Fall_2003/ling001/penn_treebank_pos.html)
+
 * Lemmas
 
 ```python3
