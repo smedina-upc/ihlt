@@ -69,8 +69,7 @@ class: left, middle, inverse
   - MWETokenizer is not useful.
 
 * POS tags <br>
-`t_POS_list = nltk.pos_tag(t_list)`
-
+`t_POS_list = nltk.pos_tag(t_list)` <br>
 [Penn Treebank Tag Set](https://www.ling.upenn.edu/courses/Fall_2003/ling001/penn_treebank_pos.html)
 
 * Lemmas
