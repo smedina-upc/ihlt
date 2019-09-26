@@ -73,13 +73,13 @@ in this task:
 
 * It consists of four files:
 
-  - *trial* : includes the definition of the scores, a sample of 5 sentence pairs and the input and output formats. It is not needed, but it is useful for prototyping.
+  - [*trial*](resources/trial.tgz) : includes the definition of the scores, a sample of 5 sentence pairs and the input and output formats. It is not needed, but it is useful for prototyping.
 
-  - *train* : training data from paraphrasing data sets, input and output formats.
+  - [*train*](resources/train.tgz) : training data from paraphrasing data sets, input and output formats.
 
-  - *test* : test data from paraphrasing data sets.
+  - [*test*](resources/test-gold.tgz) : test data from paraphrasing data sets.
 
-  - *All system submissions* : submissions of the participants.
+  - [*All system submissions*](resources/task6-submissions.tgz) : submissions of the participants.
 
 ---
 
