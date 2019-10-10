@@ -25,7 +25,7 @@ class: left, middle, inverse
 
 * WordNet Similarities
 
-* Paraphrases
+* Exercise
 
 ---
 
@@ -62,7 +62,7 @@ class: left, middle, inverse
 
 * .cyan[WordNet Similarities]
 
-* Paraphrases
+* Exercise
 
 ---
 
@@ -93,7 +93,7 @@ class: left, middle, inverse
 
 * .brown[WordNet Similarities]
 
-* .cyan[Paraphrases]
+* .cyan[Exercise]
 
 ---
 
