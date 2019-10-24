@@ -77,7 +77,7 @@ Maximum entropy model (PERSON, LOCATION, ORGZATION) trained with ACE corpus
 
 ```python3
 from nltk import ne_chunk
-ne_chunk(POS tagged sent, binary=False)
+ne_chunk(POS_tagged_sent, binary=False)
 ```
 
   - `binary: True` is used just to recognize NEs, without
