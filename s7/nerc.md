@@ -40,7 +40,7 @@ Maximum Entropy Name Entity Chunker:
 ```python3
 import nltk
 
-nltk.download('maxent ne chunker')
+nltk.download('maxent_ne_chunker')
 nltk.download('conll2000')
 ```
 
