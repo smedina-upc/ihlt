@@ -18,9 +18,14 @@
 
 7. [Word Sequences](s7/index.html)
 
-8. [Parsing](s8/index.html)
+8. Project
 
-9. [Coreference](s9/index.html)
+9. [Parsing](s8/index.html)
+
+10. [Coreference](s9/index.html)
+
+11. Project
+
 ]
 .col2[
 ## Blocks
@@ -35,7 +40,7 @@
 
 * [Semantic Textual Similarity](sts/index.html)
 
-### Autors
+### Authors
 
 Gerard Escudero
 
