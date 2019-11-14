@@ -149,7 +149,7 @@ CoreNLP dependency parser example:
 
 * [view](codes/dependency.html) / [download](codes/dependency.ipynb)
 
-# Mandatory exercise
+# Optional exercise
 
 Statement:
 
