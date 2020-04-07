@@ -119,6 +119,8 @@ metrics.
 
 * Add new components at your choice (optional).
 
+* Not word neither sentence embeddings should be allowed.
+
 * Compare and comment the results achieved by these approaches among them and among the official results.
 
 * Send files to raco in IHLT STS Project before the oral presentation:

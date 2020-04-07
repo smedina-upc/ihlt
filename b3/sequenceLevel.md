@@ -19,13 +19,13 @@ class: left, middle, inverse
 
 # Outline
 
-* .cyan[NER]
+* .cyan[Chunking]
 
-* Chunking
+* NER
 
 ---
 
-# NER
+# Chunking
 
 #### Statement
 
@@ -37,18 +37,21 @@ class: left, middle, inverse
 
   3. Use Conll2000 corpora as training data
 
+**Note**: see the nltk documentation about classifier-based NP chunkers:
+[https://www.nltk.org/book_1ed/ch07.html](https://www.nltk.org/book_1ed/ch07.html)
+
 ---
 class: left, middle, inverse
 
 # Outline
 
-* .brown[NER]
+* .brown[Chunking]
 
-* .cyan[Chunking]
+* .cyan[NER]
 
 ---
 
-# Chunking
+# NER
 
 #### Attached resources
 
@@ -63,3 +66,7 @@ class: left, middle, inverse
   2. Use CRF as main algorithm
 
   3. Use Conll2003 (English or German) or Conll2002 (Spanish or Dutch) corpora as training data
+
+**Note**: see the nltk documentation about classifier-based NP chunkers:
+[https://www.nltk.org/book_1ed/ch07.html](https://www.nltk.org/book_1ed/ch07.html)
+

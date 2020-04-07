@@ -108,6 +108,8 @@ sentence similarity metrics.
   - Explore the syntactic dimension alone.
   - Explore the combination of both previous.
 
+* Not word neither sentence embeddings should be allowed.
+
 * Compare and comment the results achieved by these approaches
 among them and among the official results.
 
@@ -127,14 +129,14 @@ among them and among the official results.
 * Text level:
   - Language identifier
 
-* Lexical level (only one of them):
+* Lexical level (**only one of them**):
   - Spelling corrector
   - SMS spam filtering
   - WordNet & WSD
   - Sentiment analysis
   - SensEval Lexical Sample
 
-* Sequence Level (only one of them):
+* Sequence Level (**only one of them**):
   - NER
   - Chunking
 

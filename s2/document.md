@@ -173,12 +173,13 @@ Statement:
 evaluation framework of the project.
 
 2. Compute their similarities by considering words and
-Jaccard distance.
+Jaccard distance. A distance should be obtained for each pair of sentences.
 
 3. Compare the previous results with gold standard by giving
-the pearson correlation between them. <br>
+the pearson correlation between them. Only a global measure should be obtained from all previous distances.<br>
 `from scipy.stats import pearsonr` <br>
 `pearsonr(refs, tsts)[0]`
+
 
 Notes:
 
