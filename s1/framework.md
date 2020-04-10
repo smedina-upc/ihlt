@@ -50,6 +50,7 @@ class: left, middle, inverse
 <br>
 
 * Similar open-source NLP suites out of this framework: <br>
+  - spaCy
   - Stanford CoreNLP
   - Freeling
   - Apache OpenNLP
