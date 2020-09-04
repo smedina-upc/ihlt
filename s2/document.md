@@ -173,7 +173,7 @@ Statement:
 evaluation framework of the project.
 
 2. Compute their similarities by considering words and
-Jaccard distance. A distance should be obtained for each pair of sentences.
+Jaccard distance. A distance should be obtained for each pair of sentences (a vector of similarities).
 
 3. Compare the previous results with gold standard by giving
 the pearson correlation between them. Only a global measure should be obtained from all previous distances.<br>

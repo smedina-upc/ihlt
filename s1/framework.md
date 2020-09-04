@@ -64,22 +64,36 @@ class: left, middle, inverse
 
 * a set of exercises solved in lab sessions (individual)
 
+* the project Semantic Textual Similarity (in pairs)
+
+* Grade = 0.45 * Project + 0.1 * Sessions <br>
+(this represents the 55% of the final IHLT grade)
+
+#### Optional small projects
+
 * a set of 3 small projects, one per block among diferent
 propossals (in pairs)
 
-* the project Semantic Textual Similarity (in pairs)
+* Each block exercise can raise the *Sessions* grade up to a maximum of 10%.
 
---
+---
 
-<br>
+# Delivering Exercises & Projects
 
-* Grade = 0.3 * Project + 0.1 Blocks + 0.1 * Sessions <br>
-(this represents the 50% of the final IHLT grade)
-
-<br>
+**Notebooks**:
 
 * Jupyter notebooks of exercises & projects should be
-uploaded to [https://raco.fib.upc.edu](https://raco.fib.upc.edu)
+uploaded to [https://raco.fib.upc.edu](https://raco.fib.upc.edu)<br><br>
+.red[This year we will accept exceptionally 'colab notebooks':] <br>
+[https://colab.research.google.com/notebooks/intro.ipynb](https://colab.research.google.com/notebooks/intro.ipynb)
+
+**Evaluation criteria**:
+
+- Correctness
+- Efficiency
+- Clarity and organization
+- Linguistic resources
+- Analysis and conclusions
 
 ---
 
@@ -101,7 +115,7 @@ detection, ...
 
 # Project description
 
-#### Deadline: 12/12/2019 (oral presentation)
+#### Deadline: 10 December (oral presentation)
 
 * Implement some approaches to detect paraphrase using
 sentence similarity metrics. 
@@ -125,7 +139,7 @@ among them and among the official results.
 
 # Small projects (blocks)
 
-#### Deadline: 12/12/2019
+#### Deadline: 10 December
 
 * Text level:
   - Language identifier

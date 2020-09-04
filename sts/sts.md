@@ -69,7 +69,8 @@ in this task:
 ## Data
 
 * All the data involved in the task is available at the data page: <br>
-[https://www.cs.york.ac.uk/semeval-2012/task6/index.php%3Fid=data.html](https://www.cs.york.ac.uk/semeval-2012/task6/index.php%3Fid=data.html)
+[https://www.cs.york.ac.uk/semeval-2012/task6/index.php%3Fid=data.html](https://www.cs.york.ac.uk/semeval-2012/task6/index.php%3Fid=data.html)<br>
+No other source data is allowed.
 
 * It consists of four files:
 
@@ -134,7 +135,7 @@ metrics.
 
 The project evaluation will be:
 
-`ProjectGrade = 0.15 ∗ Result + 0.1 ∗ Presentation + 0.05 ∗ Notebook`
+`ProjectGrade = 0.5 ∗ Result + 0.25 ∗ Presentation + 0.25 ∗ Notebook`
 
 where the Result will be constrained by rules in next table:
 
