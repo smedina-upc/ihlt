@@ -47,17 +47,14 @@
 -->
 ]
 .col2[
+
+<!--
 ## Blocks
 
-<!--
 * [Text Level](b1/index.html)
--->
 
-<!--
 * [Lexical Level](b2/index.html)
--->
 
-<!--
 * [Sequence Level](b3/index.html)
 -->
 
