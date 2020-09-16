@@ -39,8 +39,6 @@ class: left, middle, inverse
 
 * Solve simple programming exercises
 
---
-
 <br>
 
 * Programming platform: Jupyter (python3)
@@ -66,26 +64,11 @@ class: left, middle, inverse
 
 * the project Semantic Textual Similarity (in pairs)
 
-* Grade = 0.45 * Project + 0.1 * Sessions <br>
+.blue[Grade = 0.45 * Project + 0.1 * Sessions] <br>
 (this represents the 55% of the final IHLT grade)
 
-#### Optional small projects
-
-* a set of 3 small projects, one per block among diferent
-propossals (in pairs)
-
-* Each block exercise can raise the *Sessions* grade up to a maximum of 10%.
-
----
-
-# Delivering Exercises & Projects
-
-**Notebooks**:
-
-* Jupyter notebooks of exercises & projects should be
-uploaded to [https://raco.fib.upc.edu](https://raco.fib.upc.edu)<br><br>
-.red[This year we will accept exceptionally 'colab notebooks':] <br>
-[https://colab.research.google.com/notebooks/intro.ipynb](https://colab.research.google.com/notebooks/intro.ipynb)
+Jupyter notebooks of exercises & projects should be
+uploaded to [https://raco.fib.upc.edu](https://raco.fib.upc.edu)
 
 **Evaluation criteria**:
 
@@ -94,6 +77,15 @@ uploaded to [https://raco.fib.upc.edu](https://raco.fib.upc.edu)<br><br>
 - Clarity and organization
 - Linguistic resources
 - Analysis and conclusions
+
+<!--
+#### Optional small projects
+
+* a set of 3 small projects, one per block among diferent
+propossals (in pairs)
+
+* Each block exercise can raise the *Sessions* grade up to a maximum of 10%.
+-->
 
 ---
 
@@ -135,7 +127,7 @@ among them and among the official results.
   - Jupyter notebook: sts-[Student1]-[Student2].ipynb
   - Slides: sts-[Student1]-[Student2].pdf
 
----
+<!--
 
 # Small projects (blocks)
 
@@ -154,6 +146,8 @@ among them and among the official results.
 * Sequence Level (**only one of them**):
   - NER
   - Chunking
+
+-->
 
 ---
 class: left, middle, inverse
