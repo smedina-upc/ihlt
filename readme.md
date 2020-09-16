@@ -60,7 +60,7 @@
 
 ## Project
 
-* [Semantic Textual Similarity](sts/index.html)
+[Semantic Textual Similarity](sts/index.html)
 
 ### Authors
 
