@@ -102,9 +102,9 @@ Third party model: Stanford CoreNLP server
 * CRFs and rule models (PER, LOC, ORG, DATE, TIME, MONEY, ...)
 
 ```python3
-from nltk.tag.stanford import CoreNLPNERTagger
+from nltk.parse.corenlp import CoreNLPParser
 
-CoreNLPNERTagger(url=’http://localhost:9000’).tag(tokenized sent)
+l = CoreNLPParser(url='http://localhost:9000').parse(tokenized_sent)
 ```
 
 make sure you have installed at least nltk version 3.2.5
