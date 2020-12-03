@@ -22,9 +22,7 @@
 
 9. [Parsing](s8/index.html)
 
-<!--
 10. [Coreference](s9/index.html)
--->
 
 <!--
 11. Project
