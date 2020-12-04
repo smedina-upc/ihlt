@@ -120,7 +120,7 @@ metrics.
 
 * Add new components at your choice (optional).
 
-* Not word neither sentence embeddings should be allowed.
+* Already generated word or sentence embeddings models are not allowed, such as BERT.
 
 * Compare and comment the results achieved by these approaches among them and among the official results.
 
