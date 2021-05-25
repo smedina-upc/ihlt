@@ -31,9 +31,17 @@ class: left, middle, inverse
 
 # Session requirements
 
+PoS tagger & lemmatizer:
+
+```python3
+import nltk
+
+nltk.download('wordnet')
+```
+
 Attached resources:
 
-* [trial.tgz](resources/trial.tgz)
+[`test-gold.tgz`](../sts/resources/test-gold.tgz)
 
 ---
 class: left, middle, inverse
@@ -52,7 +60,7 @@ class: left, middle, inverse
 
 Lesk in NLTK:
 
-* [view](codes/lesk.html) / [download](codes/lesk.ipynb)
+* [view](codes/s6a.html) / [download](codes/s6a.ipynb)
 
 ---
 class: left, middle, inverse
@@ -71,7 +79,8 @@ class: left, middle, inverse
 
 Statement:
 
-1. Read all pairs of sentences of the trial set within the evaluation framework of the project.
+1. Read all pairs of sentences of the *SMTeuroparl* files of test set within the
+evaluation framework of the project.
 
 2. Apply Lesk’s algorithm to the words in the sentences.
 

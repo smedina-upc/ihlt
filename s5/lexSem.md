@@ -21,6 +21,33 @@ class: left, middle, inverse
 
 # Outline
 
+* .cyan[Session requirements]
+
+* WordNet
+
+* WordNet Similarities
+
+* Exercise
+
+---
+
+# Session requirements
+
+WordNet:
+```python3
+import nltk
+nltk.download('wordnet')
+```
+
+No attached resources.
+
+---
+class: left, middle, inverse
+
+# Outline
+
+* .brown[Session requirements]
+
 * .cyan[WordNet]
 
 * WordNet Similarities
@@ -51,12 +78,14 @@ Provide an interface to access WordNet data, such as:
 
 Example:
 
-* [view](codes/wordnet.html) / [download](codes/wordnet.ipynb)
+* [view](codes/s5a.html) / [download](codes/s5a.ipynb)
 
 ---
 class: left, middle, inverse
 
 # Outline
+
+* .brown[Session requirements]
 
 * .brown[WordNet]
 
@@ -82,12 +111,14 @@ class: left, middle, inverse
 
 Example:
 
-* [view](codes/similarities.html) / [download](codes/similarities.ipynb)
+* [view](codes/s5b.html) / [download](codes/s5b.ipynb)
 
 ---
 class: left, middle, inverse
 
 # Outline
+
+* .brown[Session requirements]
 
 * .brown[WordNet]
 
