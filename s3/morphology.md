@@ -33,7 +33,6 @@ class: left, middle, inverse
 
 PoS tagger & lemmatizer:
 
-* Both Linux & Windows (via python shell)
 
 ```python3
 import nltk
@@ -45,7 +44,7 @@ nltk.download('wordnet')
 
 Attached resources:
 
-* [trial.tgz](resources/trial.tgz): trial set of the project
+[`test-gold.tgz`](../sts/resources/test-gold.tgz)
 
 ---
 class: left, middle, inverse
@@ -87,7 +86,7 @@ wnl.lemmatize(token, pos=[POS])     # POS can be: ’n’,’v’, ...
 
 * Example:
 
-  - [view](codes/lemmatizer.html) / [download](codes/lemmatizer.ipynb)
+  - [view](codes/s3a.html) / [download](codes/s3a.ipynb)
 
 ---
 class: left, middle, inverse
@@ -106,7 +105,8 @@ class: left, middle, inverse
 
 Statement:
 
-1. Read all pairs of sentences of the trial set within the evaluation framework of the project.
+1. Read all pairs of sentences of the *SMTeuroparl* files of test set within the
+evaluation framework of the project.
 
 2. Compute their similarities by considering lemmas and Jaccard distance.
 

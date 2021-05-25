@@ -23,8 +23,6 @@ class: left, middle, inverse
 
 * .cyan[Presentation]
 
-* Software platform
-
 * Session requirements
 
 * Framework
@@ -39,20 +37,35 @@ class: left, middle, inverse
 
 * Solve simple programming exercises
 
-<br>
+.cols5050[
+.col1[
+#### Software Platform
 
-* Programming platform: Jupyter (python3)
+  - [Google Colab](https://colab.research.google.com)
 
-* NLP package for Python: nltk
+  - [Google Drive](https://drive.google.com)
 
-<br>
+#### Components:
 
-* Similar open-source NLP suites out of this framework: <br>
+  - Jupyter 
+
+  - Python3
+
+  - nltk: NLP package
+]
+.col2[
+#### Other NLP suites
+
   - spaCy
+
   - Stanford CoreNLP
+
   - Freeling
+
   - Apache OpenNLP
+
   - IXA Pipes
+]]
 
 ---
 
@@ -60,7 +73,7 @@ class: left, middle, inverse
 
 #### Mandatory exercises & projects:
 
-* a set of exercises solved in lab sessions (individual)
+* a set of exercises solved in lab sessions (in pairs)
 
 * the project Semantic Textual Similarity (in pairs)
 
@@ -77,15 +90,6 @@ uploaded to [https://raco.fib.upc.edu](https://raco.fib.upc.edu)
 - Clarity and organization
 - Linguistic resources
 - Analysis and conclusions
-
-<!--
-#### Optional small projects
-
-* a set of 3 small projects, one per block among diferent
-propossals (in pairs)
-
-* Each block exercise can raise the *Sessions* grade up to a maximum of 10%.
--->
 
 ---
 
@@ -107,7 +111,7 @@ detection, ...
 
 # Project description
 
-#### Deadline: 10 December (oral presentation)
+#### Deadline: First oral presentation session
 
 * Implement some approaches to detect paraphrase using
 sentence similarity metrics. 
@@ -127,119 +131,12 @@ among them and among the official results.
   - Jupyter notebook: sts-[Student1]-[Student2].ipynb
   - Slides: sts-[Student1]-[Student2].pdf
 
-<!--
-
-# Small projects (blocks)
-
-#### Deadline: 10 December
-
-* Text level:
-  - Language identifier
-
-* Lexical level (**only one of them**):
-  - Spelling corrector
-  - SMS spam filtering
-  - WordNet & WSD
-  - Sentiment analysis
-  - SensEval Lexical Sample
-
-* Sequence Level (**only one of them**):
-  - NER
-  - Chunking
-
--->
-
 ---
 class: left, middle, inverse
 
 # Outline
 
 * .brown[Presentation]
-
-* .cyan[Software platform]
-
-* Session requirements
-
-* Framework
-
-* Additional information
-
----
-
-# Framework installation (Linux)
-
-#### Framework (python3, jupyter, nltk, numpy, scipy):
-
-```
-> sudo apt-get install python3    
-
-> pip3 install -U pip
-
-> pip3 install jupyter
-
-> sudo pip3 install -U numpy
-
-> sudo pip3 install -U nltk
-
-> sudo pip3 install -U scipy
-
-> jupyter notebook
-
-Select `New/Python3`.
-
-Stop server with `Ctrl-C`.
-```
-
----
-
-# Framework installation (Windows)
-
-#### Framework (python3, jupyter, nltk, numpy, scipy):
-
-* Download [python3](http://www.python.org)
-
-* Install it checking the option <br> `Add python to the path`
-
-* Start the shell `cmd`:
-
-```
-> pip install jupyter
-
-> pip install -U numpy
-
-> pip install -U nltk
-
-> pip install -U scipy
-
-> jupyter notebook
-
-Select `New/Python3`.
-
-Stop server with `Ctrl-C`.
-```
-
----
-
-# Execution test
-
-#### Validate the installation process
-
-* Open a new python3 jupyter notebook 
-
-* Change the name of the session to `S1-[Student1]-[Student2]`
-
-* Import without errors `nltk` library
-
-* Save the session and exit jupyter server.
-
----
-class: left, middle, inverse
-
-# Outline
-
-* .brown[Presentation]
-
-* .brown[Software platform]
 
 * .cyan[Session requirements]
 
@@ -251,15 +148,14 @@ class: left, middle, inverse
 
 # Session requirements
 
-#### Gutenberg corpus:
+#### Gutenberg corpus & Stop Words:
 
-Both Linux & Windows (via python shell)
 ```
-> import nltk
+import nltk
 
-> nltk.download('gutenberg')
+nltk.download('gutenberg')
 
-> nltk.download('stopwords')
+nltk.download('stopwords')
 ```
 
 #### Attached resources:
@@ -271,8 +167,6 @@ class: left, middle, inverse
 # Outline
 
 * .brown[Presentation]
-
-* .brown[Software platform]
 
 * .brown[Session requirements]
 
@@ -326,7 +220,7 @@ txt = nltk.corpus.gutenberg.words('austen-persuasion.txt')
 
 Example of *Corpus reader* using the *Gutenberg corpora*: 
 
-* [view](codes/corpus.html) / [download](codes/corpus.ipynb)
+* [view](codes/s1a.html) / [download](codes/s1a.ipynb)
 
 ---
 
@@ -342,17 +236,17 @@ Words that do not have individual meaning
 
 Example of *Stopwords reader*:
 
-* [view](codes/stopwords.html) / [download](codes/stopwords.ipynb)
+* [view](codes/s1b.html) / [download](codes/s1b.ipynb)
 
 ---
 
 # Session exercise
 
-1. Develop a jupyter notebook that show the 25
+1. Develop a colab notebook that show the 25
 non-stopwords with more number of occurrences in the file
 'blake-poems.txt' of Gutenberg corpus.
 
-Upload the jupyter file of the exercise to the Raco.
+Upload the *ipynb* file of the exercise to the Raco.
 
 ---
 class: left, middle, inverse
@@ -360,8 +254,6 @@ class: left, middle, inverse
 # Outline
 
 * .brown[Presentation]
-
-* .brown[Software platform]
 
 * .brown[Session requirements]
 
@@ -383,7 +275,7 @@ It allows:
 
 Example of *Class Text*:
 
-* [view](codes/text.html) / [download](codes/text.ipynb)
+* [view](codes/s1c.html) / [download](codes/s1c.ipynb)
 
 
 .col5050[
@@ -392,14 +284,14 @@ Example of *Class Text*:
 
 Loading corpus from a text file:
 
-* [view](codes/plain.html) / [download](codes/plain.ipynb)
+* [view](codes/s1d.html) / [download](codes/s1d.ipynb)
 ]
 .col2[
 ## Web Example
 
 Fetching web data as string: 
 
-* [view](codes/web.html) / [download](codes/web.ipynb)
+* [view](codes/s1e.html) / [download](codes/s1e.ipynb)
 ]
 ]
 

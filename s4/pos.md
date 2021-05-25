@@ -31,32 +31,18 @@ class: left, middle, inverse
 
 # Session requirements
 
-* Pen treebank corpus:
-
-  - Both Linux & Windows (via python shell)
-
+Pen treebank corpus:
 ```python3
 import nltk
 nltk.download('treebank')
 ```
 
-* *dill* & *crf*:
-
-  - Linux (via shell)
-
+*crf*:
 ```
-pip3 install python-crfsuite
-pip3 install dill
+!pip install python-crfsuite
 ```
 
-  - Windows (via cmd)
-
-```
-pip install python-crfsuite
-pip install dill
-```
-
-* No attached resources.
+No attached resources.
 
 ---
 class: left, middle, inverse
@@ -80,10 +66,10 @@ Different options:
 * Learn a POS tagger
 
   - Statistical: <br>
-    *HMM*: [view](codes/hmm.html) / [download](codes/hmm.ipynb) <br>
-    *TnT*: [view](codes/tnt.html) / [download](codes/tnt.ipynb) <br>
-    *perceptron*: [view](codes/perceptron.html) / [download](codes/perceptron.ipynb) <br>
-    *CRF*: [view](codes/crf.html) / [download](codes/crf.ipynb) <br>
+    *HMM*: [view](codes/s4a.html) / [download](codes/s4a.ipynb) <br>
+    *TnT*: [view](codes/s4b.html) / [download](codes/s4b.ipynb) <br>
+    *perceptron*: [view](codes/s4c.html) / [download](codes/s4c.ipynb) <br>
+    *CRF*: [view](codes/s4d.html) / [download](codes/s4d.ipynb) <br>
 (it requires `pip3 install python-crfsuite`)
 
   - Rule based: <br>

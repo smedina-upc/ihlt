@@ -31,24 +31,17 @@ class: left, middle, inverse
 
 # Session requirements
 
-#### Beautiful Soup 4:
+#### Tokenizer:
 
-Linux (via shell)
 ```
-pip3 install beautifulsoup4
+import nltk
 
-pip3 install lxml
-```
-Windows (via cmd)
-```
-pip install beautifulsoup4
-
-pip install lxml
+nltk.download('punkt')
 ```
 
 #### Attached resources:
 
-[`trial.tgz`](resources/trial.tgz)
+[`test-gold.tgz`](../sts/resources/test-gold.tgz)
 
 ---
 class: left, middle, inverse
@@ -68,7 +61,7 @@ class: left, middle, inverse
 
 Getting raw text from HTML:
 
-* Example: [view](codes/html.html) / [download](codes/html.ipynb)
+* Example: [view](codes/s2a.html) / [download](codes/s2a.ipynb)
 
 [Beautiful Soup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/) also allows to treat HTML in all forms:
 
@@ -106,7 +99,7 @@ Getting raw text from HTML:
 
   - It allows to process very big xml files such as big corpora
 
-  - Example: [view](codes/sax.html) / [download](codes/sax.ipynb)
+  - Example: [view](codes/s2b.html) / [download](codes/s2b.ipynb)
 
 ---
 class: left, middle, inverse
@@ -142,7 +135,7 @@ sentences before tokenizing or it can be directly tokenized.
 * Transform from Unicode strings: <br>
 `T.decode('utf8')`
 
-* Example: [view](codes/token.html) / [download](codes/token.ipynb)
+* Example: [view](codes/s2c.html) / [download](codes/s2c.ipynb)
 
 ---
 
@@ -161,7 +154,7 @@ Set-oriented methods (similarities between sets of words):
 Above similarities are in [0, 1] and can be used as distances simply
 subtracting: $D = 1 − S$.
 
-* Example: [view](codes/jaccard.html) / [download](codes/jaccard.ipynb)
+* Example: [view](codes/s2d.html) / [download](codes/s2d.ipynb)
 
 ---
 
@@ -169,7 +162,7 @@ subtracting: $D = 1 − S$.
 
 Statement:
 
-1. Read all pairs of sentences of the trial set within the
+1. Read all pairs of sentences of the *SMTeuroparl* files of test set within the
 evaluation framework of the project.
 
 2. Compute their similarities by considering words and
@@ -183,9 +176,7 @@ the pearson correlation between them. Only a global measure should be obtained f
 
 Notes:
 
-* Read the file `00-readme.txt` of the trial data set to
-prepare the exercise.
-
+* Template example ([view](codes/readPars.html) / [notebook](codes/readPars.ipynb))
 * Justify the answer.
 
 
