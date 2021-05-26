@@ -43,6 +43,8 @@ nltk.download('conll2000')
 nltk.download('punkt')
 nltk.download('averaged_perceptron_tagger')
 nltk.download('words')
+
+!pip install svgling
 ```
 
 <!--
@@ -101,7 +103,6 @@ NLTK doesn’t have an English corpus for NERC (CoNLL2002 corpus for Spanish and
 Example:
 
 * [view](codes/s7a.html) / [download](codes/s7a.ipynb)
-* OLD: [view](codes/nerc.html) / [download](codes/nerc.ipynb)
 
 ---
 

@@ -19,9 +19,14 @@ Natural Language Research Group
 ---
 # Coreference
 
-#### CoreNLP coreference example:
+#### spaCy coreference example:
 
-* [view](codes/coref.html) / [download](codes/coref.ipynb)
+* [view](codes/s9a.html) / [download](codes/s9a.ipynb)
+
+* [Neural Coreference - Hugging Face](https://huggingface.co/coref/?text=My%20sister%20has%20a%20dog.%20She%20loves%20him.)
+
+![:scale 95%](figures/neuralcoref.png)
+
 
 ---
 
@@ -40,7 +45,7 @@ is the use of a book,’ thought Alice ‘without pictures or conversations?’
 * It can be downloaded from: <br>
 [http://www.gutenberg.org/files/11/11-0.txt](http://www.gutenberg.org/files/11/11-0.txt)
 
-* Apply the CoreNLP coreference solver to the previous paragraph
+* Apply the spaCy coreference solver to the previous paragraph.
 
 * Show the coreference chains. 
 
