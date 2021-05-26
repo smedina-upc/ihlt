@@ -41,9 +41,9 @@ class: left, middle, inverse
 .col1[
 #### Software Platform
 
-  - [Google Colab](https://colab.research.google.com)
+  - [Google Colab](https://colab.research.google.com): code & text
 
-  - [Google Drive](https://drive.google.com)
+  - [Google Drive](https://drive.google.com): data
 
 #### Components:
 

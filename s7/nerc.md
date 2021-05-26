@@ -33,16 +33,19 @@ class: left, middle, inverse
 
 # Session requirements
 
-Maximum Entropy Name Entity Chunker:
-
-* Both Linux and Windows (via python)
+Maximum Entropy Name Entity Chunker & CoNLL corpus:
 
 ```python3
 import nltk
 
 nltk.download('maxent_ne_chunker')
 nltk.download('conll2000')
+nltk.download('punkt')
+nltk.download('averaged_perceptron_tagger')
+nltk.download('words')
 ```
+
+<!--
 
 Stanford CoreNLP:
 * Linux (via shell)
@@ -53,6 +56,12 @@ Stanford CoreNLP:
 "whole path/stanford-corenlp-full-2017-06-09/*" edu.stanford.nlp.pipeline.StanfordCoreNLPServer -port 9000 -timeout 15000`
 
   - make sure you have intalled the later java version
+
+-->
+
+Attached resources:
+
+[`test-gold.tgz`](../sts/resources/test-gold.tgz)
 
 ---
 class: left, middle, inverse
@@ -91,34 +100,27 @@ NLTK doesn’t have an English corpus for NERC (CoNLL2002 corpus for Spanish and
 
 Example:
 
-* [view](codes/nerc.html) / [download](codes/nerc.ipynb)
+* [view](codes/s7a.html) / [download](codes/s7a.ipynb)
+* OLD: [view](codes/nerc.html) / [download](codes/nerc.ipynb)
 
 ---
 
-# NERC models in CoreNLP
+# Other NERC models
 
-Third party model: Stanford CoreNLP server
+## spaCy
+
+* Example: [view](codes/s7b.html) / [download](codes/s7b.ipynb)
+
+* [documentation](https://spacy.io/)
+
+
+## CoreNLP
+
+Third party model: [Stanford CoreNLP server](https://stanfordnlp.github.io/CoreNLP/download.html)
 
 * CRFs and rule models (PER, LOC, ORG, DATE, TIME, MONEY, ...)
 
-```python3
-from nltk.parse.corenlp import CoreNLPParser
-
-l = CoreNLPParser(url='http://localhost:9000').parse(tokenized_sent)
-```
-
-make sure you have installed at least nltk version 3.2.5
-
-* Previously, install [CoreNLP](https://stanfordnlp.github.io/CoreNLP/download.html),
-
-* and execute CoreNLP server:<br>
-`java -mx4g -cp "whole path/stanford-corenlp-full-2017-06-09/*" edu.stanford.nlp.pipeline.StanfordCoreNLPServer -port 9000 -timeout 15000`
-
-make sure you have intalled the later java version
-
-Example:
-
-* [view](codes/nerc.html) / [download](codes/nerc.ipynb)
+* Java server with callable from python
 
 ---
 class: left, middle, inverse
@@ -139,7 +141,8 @@ class: left, middle, inverse
 
 Statement:
 
-1. Read all pairs of sentences of the trial set within the evaluation framework of the project.
+1. Read all pairs of sentences of the *SMTeuroparl* files of test set within the
+evaluation framework of the project.
 
 2. Compute their similarities by considering the following approach:
 
@@ -170,7 +173,7 @@ class: left, middle, inverse
 
 Example:
 
-* [view](codes/RegExp.html) / [download](codes/RegExp.ipynb)
+* [view](codes/s7c.html) / [download](codes/s7c.ipynb)
 
 ### Optional exercise
 
@@ -204,4 +207,4 @@ Example:
 
 * IOB format
 
-* [view](codes/conll2000.html) / [download](codes/conll2000.ipynb)
+* [view](codes/s7d.html) / [download](codes/s7d.ipynb)

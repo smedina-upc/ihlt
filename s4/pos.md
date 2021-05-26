@@ -70,7 +70,6 @@ Different options:
     *TnT*: [view](codes/s4b.html) / [download](codes/s4b.ipynb) <br>
     *perceptron*: [view](codes/s4c.html) / [download](codes/s4c.ipynb) <br>
     *CRF*: [view](codes/s4d.html) / [download](codes/s4d.ipynb) <br>
-(it requires `pip3 install python-crfsuite`)
 
   - Rule based: <br>
     *Brill*

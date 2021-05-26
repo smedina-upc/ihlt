@@ -55,7 +55,7 @@ class: left, middle, inverse
 
 Example:
 
-* [view](codes/charts.html) / [download](codes/charts.ipynb)
+* [view](codes/s8a.html) / [download](codes/s8a.ipynb)
 
 
 Main differences of non-probabilistic chart parsers:
@@ -101,7 +101,7 @@ Statement:
 
 Example:
 
-* [view](codes/probParsing.html) / [download](codes/probParsing.ipynb)
+* [view](codes/s8b.html) / [download](codes/s8b.ipynb)
 
 
 Main differences of probabilistic chart parsers:
@@ -126,11 +126,8 @@ Example:
 
 * Apply the learnt PCFG to Viterbi parser
 
-* [view](codes/viterbi.html) / [download](codes/viterbi.ipynb)
+* [view](codes/s8c.html) / [download](codes/s8c.ipynb)
 
-### CoreNLP parser
-
-Previous notebook includes also a CoreNLP parser example.
 
 ---
 class: left, middle, inverse
@@ -145,15 +142,16 @@ class: left, middle, inverse
 
 # Dependency parsing
 
-CoreNLP dependency parser example:
+spaCy dependency parser example:
 
-* [view](codes/dependency.html) / [download](codes/dependency.ipynb)
+* [view](codes/s8d.html) / [download](codes/s8d.ipynb)
 
 # Optional exercise
 
 Statement:
 
-1. Read all pairs of sentences of the trial set within the evaluation framework of the project.
+1. Read all pairs of sentences of the *SMTeuroparl* files of test set within the
+evaluation framework of the project.
 
 2. Compute the Jaccard similarity of each pair using the dependency triples from CoreNLPDependencyParser.
 
