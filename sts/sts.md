@@ -136,7 +136,7 @@ metrics.
 The project evaluation will be:
 
 ```
-ProjectGrade = 0.2 ∗ Result + 
+ProjectGrade = 0.3 ∗ Result + 
                0.2 ∗ Presentation + 
                0.3 ∗ Analysis + 
                0.2 * Code
