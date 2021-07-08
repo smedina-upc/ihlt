@@ -135,7 +135,12 @@ metrics.
 
 The project evaluation will be:
 
-`ProjectGrade = 0.2 ∗ Result + 0.2 ∗ Presentation + 0.3 ∗ Analysis + 0.2 * Code`
+```
+ProjectGrade = 0.2 ∗ Result + 
+               0.2 ∗ Presentation + 
+               0.3 ∗ Analysis + 
+               0.2 * Code
+```
 
 where the Result will be constrained by rules in next table:
 
