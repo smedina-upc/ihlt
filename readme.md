@@ -45,6 +45,12 @@
 
 [Semantic Textual Similarity](sts/index.html)
 
+### External References
+
+- [Google Colab](https://colab.research.google.com)
+- [Google Drive](https://drive.google.com)
+- [Markdown Tutorial](https://guides.github.com/features/mastering-markdown/)
+
 ### Authors
 
 Gerard Escudero
