@@ -8,9 +8,9 @@
 
 2. [Document structure](s2/index.html)
 
-<!--
-
 3. [Morphology](s3/index.html)
+
+<!--
 
 4. [Part of Speech](s4/index.html)
 
