@@ -28,16 +28,14 @@ The data and corpora provided by them have become a ’de facto’ set of bench-
 marks for the NLP comunity.
 
 The *SemEval* event provides data and evaluation frameworks for several
-tasks. Task 6 is *Semantic Textual Similarity* (STS), the purpose of this
+tasks. One of them is *Semantic Textual Similarity* (STS), the purpose of this
 project. 
 
-* The description of the event is available at:
+* All information of 2012’s edition is available at: <br>
+[https://www.cs.york.ac.uk/semeval-2012/](https://www.cs.york.ac.uk/semeval-2012/)
 
-  - [http://ixa2.si.ehu.es/starsem/proc/pdf/STARSEM-SEMEVAL051.pdf](http://ixa2.si.ehu.es/starsem/proc/pdf/STARSEM-SEMEVAL051.pdf)
-
-* and the proceedings of the workshop at:
-
-  - [http://ixa2.si.ehu.es/starsem/proc/program.semeval.html](http://ixa2.si.ehu.es/starsem/proc/program.semeval.html)
+* All information of **6th task (Sematic Textual Similarity)** is available at: <br>
+[https://www.cs.york.ac.uk/semeval-2012/task6/index.html](https://www.cs.york.ac.uk/semeval-2012/task6/index.html)
 
 ---
 
@@ -51,7 +49,7 @@ Real example extracted from trial data set of above task:
 
 * `Birdie is washing itself in the water basin.`
 
-### Labels
+## Labels
 
 When doing paraphrases detection on a pair of texts, a similarity value should
 be provided. The following table shows the meaning that this label must have
@@ -70,7 +68,11 @@ in this task:
 
 ## Data
 
-* All the data consists of four files:
+* All the data involved in the task is available at the data page: <br>
+[https://www.cs.york.ac.uk/semeval-2012/task6/index.php%3Fid=data.html](https://www.cs.york.ac.uk/semeval-2012/task6/index.php%3Fid=data.html)<br>
+No other source data is allowed.
+
+* It consists of four files:
 
   - [*trial*](resources/trial.tgz) : includes the definition of the scores, a sample of 5 sentence pairs and the input and output formats. It is not needed, but it is useful for prototyping.
 
@@ -80,13 +82,29 @@ in this task:
 
   - [*All system submissions*](resources/task6-submissions.tgz) : submissions of the participants.
 
-* No other source data is allowed.
+---
 
-### Evaluation Measure
+## Evaluation Measure
 
 * In this task, pearson correlation is used for comparison purposes. It is available in python through the scipy module: <br>
 `from scipy.stats import pearsonr` <br>
 `pearsonr(refs, tsts)[0]`
+
+## 2012 Results
+
+* At the following addresses, a summary of the results of the competition could
+be found: 
+
+  - [https://www.cs.york.ac.uk/semeval-2012/task6/index.php%3Fid=results.html](https://www.cs.york.ac.uk/semeval-2012/task6/index.php%3Fid=results.html) 
+
+  - [https://www.cs.york.ac.uk/semeval-2012/task6/index.php%3Fid=results-update.html](https://www.cs.york.ac.uk/semeval-2012/task6/index.php%3Fid=results-update.html)
+
+* And at the following ones the description of the event and the proceedings
+of the workshop:
+
+  - [http://ixa2.si.ehu.es/starsem/proc/pdf/STARSEM-SEMEVAL051.pdf](http://ixa2.si.ehu.es/starsem/proc/pdf/STARSEM-SEMEVAL051.pdf)
+
+  - [http://ixa2.si.ehu.es/starsem/proc/program.semeval.html](http://ixa2.si.ehu.es/starsem/proc/program.semeval.html)
 
 ---
 
@@ -131,50 +149,3 @@ where the Result will be constrained by rules in next table:
 | 10    | if the pearson is over 10th participant (.7562) |
 | 0     | if the pearson is under the baseline (.311) |
 | proportional | in other case |
-
----
-
-## Papers
-
-- [Task 6 results](docs/task6.pdf)
-
-.blue[Participants] (>0.65 pearson):
-
-.cols5050[
-.col1[
-- [1-ukp](docs/1-ukp.pdf)
-
-- [2-takelab](docs/2-takelab.pdf)
-
-- [5-unt](docs/5-unt.pdf)
-
-- [6-ets](docs/6-ets.pdf)
-
-- [10-sriubc](docs/10-sriubc.pdf)
-
-- [12-unitor](docs/12-unitor.pdf)
-
-- [15-soft-cardinality](docs/15-soft-cardinality.pdf)
-
-- [17-sheffield](docs/17-sheffield.pdf)
-
-- [18-umcc](docs/18-umcc.pdf)
-]
-.col2[
-- [20-weiwei](docs/20-weiwei.pdf)
-
-- [22-limsi](docs/22-limsi.pdf)
-
-- [23-sbdlrhmn](docs/23-sbdlrhmn.pdf)
-
-- [24-sranjans](docs/24-sranjans.pdf)
-
-- [25-buap](docs/25-buap.pdf)
-
-- [27-penn](docs/27-penn.pdf)
-
-- [31-polyucomp](docs/31-polyucomp.pdf)
-
-- [32-fbk](docs/32-fbk.pdf)
-]]
-
