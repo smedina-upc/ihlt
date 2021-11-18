@@ -17,16 +17,23 @@
 6. [Word Sense Disambiguation](s6/index.html)
 
 7. [Word Sequences](s7/index.html)
+
 <!--
+
 8. STS Project
+
 -->
+
 9. [Parsing](s8/index.html)
 
 10. [Coreference](s9/index.html)
 
 <!--
+
 11. Project
+
 -->
+
 ]
 .col2[
 
