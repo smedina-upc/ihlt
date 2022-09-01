@@ -77,8 +77,8 @@ class: left, middle, inverse
 
 * the project Semantic Textual Similarity (in pairs)
 
-.blue[Grade = 0.45 * Project + 0.1 * Sessions] <br>
-(this represents the 55% of the final IHLT grade)
+.blue[Grade = 0.4 Project + 0.1  Sessions] <br>
+(this represents the 50% of the final IHLT grade)
 
 Jupyter notebooks of exercises & projects should be
 uploaded to [https://raco.fib.upc.edu](https://raco.fib.upc.edu)
