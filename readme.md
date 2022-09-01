@@ -6,6 +6,8 @@
 
 1. [Framework](s1/index.html)
 
+<!--
+
 2. [Document structure](s2/index.html)
 
 3. [Morphology](s3/index.html)
@@ -23,8 +25,6 @@
 9. [Parsing](s8/index.html)
 
 10. [Coreference](s9/index.html)
-
-<!--
 
 11. Project
 
