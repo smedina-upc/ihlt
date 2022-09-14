@@ -4,27 +4,26 @@
 .col1[
 ## Sessions
 
-1. [Framework](s1/index.html)
+- [Framework](s1/index.html)
+
+- [Document structure](s2/index.html)
 
 <!--
 
-2. [Document structure](s2/index.html)
+- [Morphology](s3/index.html)
 
-3. [Morphology](s3/index.html)
+- [Part of Speech](s4/index.html)
 
-4. [Part of Speech](s4/index.html)
+- [Lexical Semantics](s5/index.html)
 
-5. [Lexical Semantics](s5/index.html)
+- [Word Sense Disambiguation](s6/index.html)
 
-6. [Word Sense Disambiguation](s6/index.html)
+- [Word Sequences](s7/index.html)
 
-7. [Word Sequences](s7/index.html)
+- [Parsing](s8/index.html)
 
-8. STS Project
+- [Coreference](s9/index.html)
 
-9. [Parsing](s8/index.html)
-
-10. [Coreference](s9/index.html)
 
 11. Project
 
@@ -45,7 +44,7 @@
 
 ## Project
 
-[Semantic Textual Similarity](sts/index.html)
+- [Semantic Textual Similarity](sts/index.html)
 
 ### External References
 
