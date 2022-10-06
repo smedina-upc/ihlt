@@ -10,9 +10,9 @@
 
 - [Morphology](s3/index.html)
 
-<!--
-
 - [Part of Speech](s4/index.html)
+
+<!--
 
 - [Lexical Semantics](s5/index.html)
 
