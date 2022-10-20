@@ -14,9 +14,9 @@
 
 - [Lexical Semantics](s5/index.html)
 
-<!--
-
 - [Word Sense Disambiguation](s6/index.html)
+
+<!--
 
 - [Word Sequences](s7/index.html)
 
