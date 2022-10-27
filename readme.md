@@ -16,9 +16,9 @@
 
 - [Word Sense Disambiguation](s6/index.html)
 
-<!--
-
 - [Word Sequences](s7/index.html)
+
+<!--
 
 - [Parsing](s8/index.html)
 
