@@ -21,39 +21,13 @@ class: left, middle, inverse
 
 # Outline
 
-* .cyan[Session requirements]
-
-* Textual zones
-
-* Text level
-
----
-
-# Session requirements
-
-#### Tokenizer:
-
-```
-import nltk
-
-nltk.download('punkt')
-```
-
-#### Attached resources:
-
-[`test-gold.tgz`](../sts/resources/test-gold.tgz)
-
----
-class: left, middle, inverse
-
-# Outline
-
-* .brown[Session requirements]
-
 * .cyan[Textual zones]
 
-* Text level
+* Tokenizers
 
+* Similarities
+
+* Exercise
 
 ---
 
@@ -106,36 +80,122 @@ class: left, middle, inverse
 
 # Outline
 
-* .brown[Session requirements]
-
 * .brown[Textual zones]
 
-* .cyan[Text level]
+* .cyan[Tokenizers]
+
+* Similarities
+
+* Exercise
 
 ---
 
-# Text level in *nltk* library
+# NLTK Tokenizer
 
-* Standard functions for [tokenization](http://www.nltk.org/_modules/nltk/tokenize.html) (recommended by *nltk*):
+### Requirements
 
-  - Sentence splitting: <br>
-`s_list = nltk.sent_tokenize(T, [language='LANG'])`
+```
+import nltk
+nltk.download('punkt')
+```
 
-  - Direct tokenization: <br> 
-`t_list = nltk.word_tokenize(s, [language='LANG'])`
+### Sentence Splitting
 
-  - `LANG` can be:
-czech, danish, ducth, english, estonian, finnish, french,
-german, greek, italian, norwegian, polish, portuguese,
-slovene, spanish, swedish or turkish
+```
+nltk.sent_tokenize('Men want children. They get relaxed with kids.')
 
-* Depending on the needs, text can be splitted into
-sentences before tokenizing or it can be directly tokenized.
+👉 ['Men want children.', 'They get relaxed with kids.']
+```
 
-* Transform from Unicode strings: <br>
-`T.decode('utf8')`
+### Tokenizer
 
-* Example: [view](codes/s2c.html) / [download](codes/s2c.ipynb)
+```
+nltk.word_tokenize('Men want children.')
+
+👉 ['Men', 'want', 'children', '.']
+```
+
+---
+
+# spaCy Tokenizer (I)
+
+### Requirements
+
+```
+import spacy
+nlp = spacy.load('en_core_web_sm')
+```
+
+### Text Processing
+
+```
+doc = nlp('Men want children. They get relaxed with kids.')
+```
+
+### Sentence Splitting
+
+```
+[s.text for s in doc.sents]
+
+👉 ['Men want children.', 'They get relaxed with kids.']
+```
+
+---
+
+# spaCy Tokenizer (II)
+
+
+### Tokenizer
+
+```
+s = next(doc.sents)
+[(token.text, token.is_stop) for token in s]
+
+👉 [('Men', False), 
+    ('want', False), 
+    ('children', False), 
+    ('.', False)]
+```
+
+---
+
+# Tokenització amb TextServer (FreeLing)
+
+### Requeriments
+
+- Script auxiliar: [textserver.py](../codes/textserver.py)
+
+```
+from google.colab import drive
+import sys
+
+drive.mount('/content/drive')
+sys.path.insert(0, '/content/drive/My Drive/Colab Notebooks/ihlt')
+from textserver import TextServer
+```
+
+### Use
+
+```
+ts = TextServer('user', 'passwd', 'tokenizer') 
+
+ts.tokenizer('Men want children. They get relaxed with kids.')
+👉  [['Men', 'want', 'children', '.'],
+     ['They', 'get', 'relaxed', 'with', 'kids', '.']]
+```
+
+---
+class: left, middle, inverse
+
+# Outline
+
+* .brown[Textual zones]
+
+* .brown[Tokenizers]
+
+* .cyan[Similarities]
+
+* Exercise
 
 ---
 
@@ -143,24 +203,48 @@ sentences before tokenizing or it can be directly tokenized.
 
 Set-oriented methods (similarities between sets of words):
 
+.cols5050[
+.col1[
 * $S_{dice}(X,Y)=\frac{2\cdot \vert X \cap Y\vert}{\vert X\vert+\vert Y\vert}$
 
 * $S_{jaccard}(X,Y)=\frac{\vert X \cap Y\vert}{\vert X \cup Y\vert}$
-
+]
+.col2[
 * $S_{overlap}(X,Y)=\frac{\vert X \cap Y\vert}{min(\vert X\vert,\vert Y\vert)}$
 
 * $S_{cosine}(X,Y)=\frac{\vert X \cap Y\vert}{\sqrt{\vert X\vert\cdot\vert Y\vert}}$
+]]
 
 Above similarities are in [0, 1] and can be used as distances simply
 subtracting: $D = 1 − S$.
 
-* Example: [view](codes/s2d.html) / [download](codes/s2d.ipynb)
+### Example: 
+
+```
+from nltk.metrics import jaccard_distance
+
+jaccard_distance(set(['The','eats','fish','.']),
+                 set(['The','eats','blue','fish','.']))
+
+👉  0.2
+```
+
+---
+class: left, middle, inverse
+
+# Outline
+
+* .brown[Textual zones]
+
+* .brown[Tokenizers]
+
+* .brown[Similarities]
+
+* .cyan[Exercise]
 
 ---
 
-# Mandatory exercise
-
-Statement:
+# Exercise
 
 1. Read all pairs of sentences of the *SMTeuroparl* files of test set within the
 evaluation framework of the project.
@@ -173,12 +257,17 @@ the pearson correlation between them. Only a global measure should be obtained f
 `from scipy.stats import pearsonr` <br>
 `pearsonr(refs, tsts)[0]`
 
+4. Justify the answer.
 
-Notes:
-
-* Template example ([view](codes/readPars.html) / [notebook](codes/readPars.ipynb))
-* Justify the answer.
-
+.cols5050[
+.col1[
+#### Notes:
+* Template example: <br> ([view](codes/readPars.html) / [notebook](codes/readPars.ipynb))
+]
+.col2[
+#### Attached resources:
+* [`test-gold.tgz`](../sts/resources/test-gold.tgz)
+]]
 
 
 

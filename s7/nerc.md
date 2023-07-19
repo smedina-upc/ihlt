@@ -21,13 +21,171 @@ class: left, middle, inverse
 
 # Outline
 
-* .cyan[Session requirements]
+* .cyan[NERC models]
 
-* NERC models
-
-* Paraphrases
+* Exercise
 
 * Learning sequences
+
+---
+
+# NERC in NLTK I
+
+Maximum Entropy Model (PERSON, LOCATION, ORGANIZATION)
+
+**Requirements**:
+
+```python3
+import nltk
+nltk.download('punkt')
+nltk.download('averaged_perceptron_tagger')
+nltk.download('maxent_ne_chunker')
+nltk.download('words')
+```
+
+**Use**:
+
+```python3
+sentence = "Mark Pedersen is working at Google since 1994."
+
+res = nltk.ne_chunk(
+        nltk.pos_tag(
+          nltk.word_tokenize(sentence)))
+
+type(res)  👉  nltk.tree.tree.Tree
+```
+
+---
+
+# NERC in NLTK II
+
+**Result**:
+
+.cols5050[
+.col1[
+```python3
+print(res)
+👉  (S
+      (PERSON Mark/NNP)
+      (ORGANIZATION Pedersen/NNP)
+      is/VBZ
+      working/VBG
+      at/IN
+      (ORGANIZATION Google/NNP)
+      since/IN
+      1994/CD
+      ./.)
+```
+]
+.col2[
+```python3
+!pip install svgling
+import svgling
+```
+![:scale 115%](figures/tree.png)
+
+]]
+
+---
+
+# NERC in spaCy I
+
+**Requirements**:
+
+```python3
+import spacy
+nlp = spacy.load('en_core_web_sm')
+```
+
+**Use**:
+
+```python3
+sentence = "Mark Pedersen works at Google since 1994."
+doc = nlp(sentence)
+
+[(token.text, token.pos_, token.tag_, token.lemma_, token.is_stop, 
+  token.ent_iob_, token.ent_type_) for token in doc]
+👉
+[('Mark', 'PROPN', 'NNP', 'Mark', False, 'B', 'PERSON'),
+ ('Pedersen', 'PROPN', 'NNP', 'Pedersen', False, 'I', 'PERSON'),
+ ('works', 'VERB', 'VBZ', 'work', False, 'O', ''),
+ ('at', 'ADP', 'IN', 'at', True, 'O', ''),
+ ('Google', 'PROPN', 'NNP', 'Google', False, 'B', 'ORG'),
+ ('since', 'SCONJ', 'IN', 'since', True, 'O', ''),
+ ('1994', 'NUM', 'CD', '1994', False, 'B', 'DATE'),
+ ('.', 'PUNCT', '.', '.', False, 'O', '')]
+```
+
+---
+
+# NERC in spaCy II
+
+**Extraction of entities**:
+
+```python3
+[(ent.text, ent.label_) for ent in doc.ents]
+👉
+[('Mark Pedersen', 'PERSON'), ('Google', 'ORG'), ('1994', 'DATE')]
+```
+
+![:scale 80%](figures/spacy.png)
+
+
+---
+
+# NERC in spaCy III
+
+**Work with multiwords**:
+
+```python3
+with doc.retokenize() as retokenizer:
+    tokens = [token for token in doc]
+    for ent in doc.ents:
+        retokenizer.merge(doc[ent.start:ent.end], 
+            attrs={"LEMMA": " ".join([tokens[i].text 
+                                for i in range(ent.start, ent.end)])})
+
+[(token.text, token.pos_, token.tag_, token.lemma_, token.is_stop, 
+  token.ent_iob_, token.ent_type_) for token in doc]
+👉
+[('Mark Pedersen', 'PROPN', 'NNP', 'Mark Pedersen', False, 'B', 'PERSON'),
+ ('works', 'VERB', 'VBZ', 'work', False, 'O', ''),
+ ('at', 'ADP', 'IN', 'at', True, 'O', ''),
+ ('Google', 'PROPN', 'NNP', 'Google', False, 'B', 'ORG'),
+ ('since', 'SCONJ', 'IN', 'since', True, 'O', ''),
+ ('1994', 'NUM', 'CD', '1994', False, 'B', 'DATE'),
+ ('.', 'PUNCT', '.', '.', False, 'O', '')]
+```
+
+---
+
+# NERC in TextServer I
+
+### Requirements: [textserver.py](../codes/textserver.py)
+
+```
+from google.colab import drive
+import sys
+
+drive.mount('/content/drive')
+sys.path.insert(0, '/content/drive/My Drive/Colab Notebooks/ihlt')
+from textserver import TextServer
+```
+
+### Use:
+
+```python3
+ts = TextServer('user', 'passwd', 'entities')
+ts.entities("Mark Pedersen works at Google since 1994.")
+👉
+[[['Mark_Pedersen', 'mark_pedersen', 'NP00SP0', 'noun', 'N/A', 'person'],
+  ['works', 'work', 'VBZ', 'verb', '01525666-v', 'N/A'],
+  ['at', 'at', 'IN', 'preposition', 'N/A', 'N/A'],
+  ['Google', 'google', 'NP00G00', 'noun', '06578905-n', 'location'],
+  ['since', 'since', 'IN', 'preposition', 'N/A', 'N/A'],
+  ['1994', '1994', 'Z', 'number', 'N/A', 'N/A'],
+  ['.', '.', 'Fp', 'punctuation', 'N/A', 'N/A']]]
+```
 
 ---
 

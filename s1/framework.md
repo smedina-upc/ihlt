@@ -23,9 +23,9 @@ class: left, middle, inverse
 
 * .cyan[Presentation]
 
-* Session requirements
+* Linguistic resources
 
-* Framework
+* Exercise
 
 * Additional information
 
@@ -41,30 +41,18 @@ class: left, middle, inverse
 .col1[
 #### Software Platform
 
-  - [Google Colab](https://colab.research.google.com): code & text
+  - [Google Colab](https://colab.research.google.com) <br> code & documentation
 
-  - [Google Drive](https://drive.google.com): data
-
+  - [Google Drive](https://drive.google.com) <br> data & models
+]
+.col2[
 #### Components:
 
   - Jupyter 
 
   - Python3
 
-  - nltk: NLP package
-]
-.col2[
-#### Other NLP suites
-
-  - spaCy
-
-  - Stanford CoreNLP
-
-  - Freeling
-
-  - Apache OpenNLP
-
-  - IXA Pipes
+  - nltk, spaCy & Freeling
 ]]
 
 ---
@@ -86,10 +74,10 @@ uploaded to [https://raco.fib.upc.edu](https://raco.fib.upc.edu)
 **Evaluation criteria**:
 
 - Correctness
-- Efficiency
 - Clarity and organization
-- Linguistic resources
 - Analysis and conclusions
+
+.red[Pendent!!!]
 
 ---
 
@@ -111,7 +99,7 @@ detection, ...
 
 # Project description
 
-#### Deadline: First oral presentation session
+#### Deadline: oral presentation session
 
 * Implement some approaches to detect paraphrase using
 sentence similarity metrics. 
@@ -138,28 +126,84 @@ class: left, middle, inverse
 
 * .brown[Presentation]
 
-* .cyan[Session requirements]
+* .cyan[Linguistic resources]
 
-* Framework
+* Exercise
 
 * Additional information
 
 ---
 
-# Session requirements
+# Natural Language Toolkit
 
-#### Gutenberg corpus & Stop Words:
+.small[- Open-source Python library: [https://www.nltk.org/](https://www.nltk.org/)]
 
-```
+.cols5050[
+.col1[
+**Example:**
+
+.small[
+```python3
+!pip install svgling
 import nltk
+import svgling
+nltk.download('punkt')
+nltk.download('averaged_perceptron_tagger')
+nltk.download('maxent_ne_chunker')
+nltk.download('words')
+s = 'Mark is working at Google.'
+x = nltk.pos_tag(nltk.word_tokenize(s))
+t = nltk.ne_chunk(x)
+svgling.draw_tree(t)
+```
+]
+.center[![:scale 80%](figures/nltk.png)]
+]
+.col2[
+**Content:**
 
-nltk.download('gutenberg')
+* *Corpus*: Brown corpus (PoS), sentence polarity corpus... 
 
-nltk.download('stopwords')
+* *Lexical resources*: WordNet, SentiWordNet...
+
+* *Grammars*: English, Spanish, ...
+
+* *Models*: Named Entities, taggers...
+]]
+
+---
+
+# FreeLing
+
+.small[
+- C++ library: [https://nlp.lsi.upc.edu/freeling/](https://nlp.lsi.upc.edu/freeling/)
+
+- It has and http API, [TextServer](https://textserver.lsi.upc.edu/textserver/login).
+]
+
+[Demo](https://nlp.lsi.upc.edu/freeling/demo/demo.php):
+
+![:scale 100%](figures/freeling.png)
+
+---
+
+# spaCy
+
+- Python library with a neural model: [https://spacy.io/](https://spacy.io/)
+
+**Example:**
+
+```
+[('Smith', 'NNP', 'nsubj', jumps),
+ ('jumps', 'VBZ', 'ROOT', jumps),
+ ('over', 'IN', 'prep', jumps),
+ ('the', 'DT', 'det', dog),
+ ('lazy', 'JJ', 'amod', dog),
+ ('dog', 'NN', 'pobj', over),
+ ('.', '.', 'punct', jumps)]
 ```
 
-#### Attached resources:
-[`pg35688.txt`](resources/pg35688.txt)
+![:scale 100%](figures/spacy.png)
 
 ---
 class: left, middle, inverse
@@ -168,38 +212,11 @@ class: left, middle, inverse
 
 * .brown[Presentation]
 
-* .brown[Session requirements]
+* .brown[Linguistic resources]
 
-* .cyan[Framework]
+* .cyan[Exercise]
 
 * Additional information
-
----
-
-# NLTK Resources
-
-#### Python library:
-
-List of [resources](http://www.nltk.org/nltk_data/).
-
-Download non-default resources from nltk:
-
-```python3
-import nltk
-nltk.download()
-```
-
-#### Content
-
-* *Corpora and lexical resources*: Brown corpus (PoS
-annotations), sentence polarity corpus... 
-
-* *Lexical resources* such as WordNet, SentiWordNet and specialized word lists.
-
-* *Toy grammars*: grammars for English, Spanish, ...
-
-* *Models*: Named Entity recognizer, taggers for English and
-Russian, ...
 
 ---
 
@@ -240,7 +257,19 @@ Example of *Stopwords reader*:
 
 ---
 
-# Session exercise
+# Exercise
+
+#### Requirements: 
+
+```
+import nltk
+
+nltk.download('gutenberg')
+
+nltk.download('stopwords')
+```
+
+#### Statement:
 
 1. Develop a colab notebook that show the 25
 non-stopwords with more number of occurrences in the file
@@ -255,9 +284,9 @@ class: left, middle, inverse
 
 * .brown[Presentation]
 
-* .brown[Session requirements]
+* .brown[Linguistic resources]
 
-* .brown[Framework]
+* .brown[Exercise]
 
 * .cyan[Additional information]
 
@@ -285,6 +314,9 @@ Example of *Class Text*:
 Loading corpus from a text file:
 
 * [view](codes/s1d.html) / [download](codes/s1d.ipynb)
+
+* Attached resource:
+[`pg35688.txt`](resources/pg35688.txt)
 ]
 .col2[
 ## Web Example

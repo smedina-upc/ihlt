@@ -21,110 +21,175 @@ class: left, middle, inverse
 
 # Outline
 
-* .cyan[Session requirements]
-
-* PoS Models
+* .cyan[Part-of-Speech Models]
 
 * Exercise
 
 ---
 
-# Session requirements
+# Part-of-Speech Models
 
-Pen treebank corpus:
-```python3
+- Statistical: <br>
+
+  - *Hidden Markov Models*
+
+  - *Conditional Random Fields*
+
+  - *TnT*, *Perceptron*
+
+  - ...
+
+- Rule based: 
+
+  - *Brill*
+
+---
+
+# Penn Treebank
+
+### Requirements
+
+```
 import nltk
 nltk.download('treebank')
 ```
 
-*crf*:
+### Access
+
+```
+len(nltk.corpus.treebank.tagged_sents()) 👉 3914
+
+nltk.corpus.treebank.tagged_sents()[1]
+👉 [('Mr.', 'NNP'),
+    ('Vinken', 'NNP'),
+    ('is', 'VBZ'),
+    ('chairman', 'NN'),
+    ('of', 'IN'),
+    ('Elsevier', 'NNP'),
+    ('N.V.', 'NNP'),
+    (',', ','),
+    ('the', 'DT'),
+    ('Dutch', 'NNP'),
+    ('publishing', 'VBG'),
+    ('group', 'NN'),
+    ('.', '.')]
+```
+
+---
+
+# Hidden Markov Models I
+
+### Single Validation Data
+
+```
+train = nltk.corpus.treebank.tagged_sents()[:3000]
+test = nltk.corpus.treebank.tagged_sents()[3000:]
+```
+
+### Learning the model (MLE)
+
+```
+trainer = nltk.tag.hmm.HiddenMarkovModelTrainer()
+HMM = trainer.train_supervised(train)
+
+HMM.accuracy(test) 👉 0.36844377293330455
+
+len(set(test).difference(train)) 👉 1629
+```
+
+---
+
+# Hidden Markov Models II
+
+### Learning the model (LID smoothing)
+
+```
+def LID(fd, bins):
+  return nltk.probability.LidstoneProbDist(fd, 0.1, bins)
+
+trainer = nltk.tag.hmm.HiddenMarkovModelTrainer()
+HMM = trainer.train_supervised(train, estimator=LID)
+
+HMM.accuracy(test) 👉 0.8984243470753291
+
+```
+
+### Learning the  model (LID smoothing)
+
+```
+HMM = nltk.HiddenMarkovModelTagger.train(train)
+
+HMM.accuracy(test) 👉 0.8984243470753291
+
+```
+
+---
+
+# Hidden Markov Models III
+
+### Saving models
+
+```
+import dill
+from google.colab import drive
+
+drive.mount('/content/drive')
+
+with open('/content/drive/My Drive/models/hmmTagger.dill', 'wb') as f:
+    dill.dump(HMM, f)
+```
+
+### Loading models
+
+```
+with open('/content/drive/My Drive/models/hmmTagger.dill', "rb") as f:
+    hmm = dill.load(f)
+```
+
+---
+
+### TnT
+
+```
+TnT = nltk.tag.tnt.TnT()
+TnT.train(train_data)
+TnT.evaluate(test_data) c0.457
+TnT.tag(['the', 'men', 'attended', 'to', 'the', 'meetings'])  👉  ...
+```
+
+### Perceptron
+
+```
+PER = nltk.tag.perceptron.PerceptronTagger(load=False)
+PER.train(train_data)
+PER.evaluate(test_data)  👉  0.644
+PER.tag(['the', 'men', 'attended', 'to', 'the', 'meetings'])  👉  ...
+```
+
+### CRF
+
 ```
 !pip install python-crfsuite
-```
+...
 
-No attached resources.
+CRF = nltk.tag.CRFTagger()
+CRF.train(train_data,'crf_tagger_model')
+CRF.evaluate(test_data)  👉  0.685
+CRF.tag(['the', 'men', 'attended', 'to', 'the', 'meetings'])  👉  ...
+```
 
 ---
 class: left, middle, inverse
 
 # Outline
 
-* .brown[Session requirements]
-
-* .cyan[PoS Models]
-
-* Exercise
-
----
-
-# PoS Models
-
-Different options:
-
-* Use the default POS tagger (averaged perceptron) or a predefined one
-
-* Learn a POS tagger
-
-  - Statistical: <br>
-    *HMM*: [view](codes/s4a.html) / [download](codes/s4a.ipynb) <br>
-    *TnT*: [view](codes/s4b.html) / [download](codes/s4b.ipynb) <br>
-    *perceptron*: [view](codes/s4c.html) / [download](codes/s4c.ipynb) <br>
-    *CRF*: [view](codes/s4d.html) / [download](codes/s4d.ipynb) <br>
-
-  - Rule based: <br>
-    *Brill*
-
-* Use third-parties’ code:
-  - Senna
-  - Stanford
-  - hunpos
-
----
-
-# Saving & loading models
-
-Save/Load a learned model:
-
-* CRF uses their own.
-
-```python3
-# Training and save:
-CRF.train(train data,"fileName")
-# Load
-CRF.set_model_file("fileName")
-```
-
-* *HMM*, *Perceptron* and *TnT* can use *dill*. 
-
-```python3
-import dill
-# saving
-with open("tnt_treebank_pos_tagger", "wb") as f:
-    dill.dump(TnT, f)
-# loading
-with open("tnt_treebank_pos_tagger", "rb") as f:
-    TnT = dill.load(f)
-```
-
-* *Perceptron* and *TnT* can also use *pickle* <br>
-(`dump` and `load` functions).
-
----
-class: left, middle, inverse
-
-# Outline
-
-* .brown[Session requirements]
-
-* .brown[PoS Models]
+* .brown[Part-of-Speech Models]
 
 * .cyan[Exercise]
 
 ---
 
-# Mandatory exercise
-
-Statement:
+# Exercise
 
 1. Consider Treebank corpus. 
 
@@ -140,4 +205,4 @@ sentences from 3001.
 
   * Which model would you select? Justify the answer.
 
-Upload the jupyter file of the exercise to the Raco.
+
