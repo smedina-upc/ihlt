@@ -17,22 +17,92 @@ Natural Language Research Group
 ![:scale 75%](fib.png)
 
 ---
-# Coreference
+class: left, middle, inverse
 
-#### spaCy coreference example:
+# Outline
 
-* [view](codes/s9a.html) / [download](codes/s9a.ipynb)
+- .cyan[Coreference]
 
-* [Neural Coreference - Hugging Face](https://huggingface.co/coref/?text=My%20sister%20has%20a%20dog.%20She%20loves%20him.)
+- Exercici
+
+---
+
+# Coreference in spaCy I
+
+### Requirements
+
+```python3
+!pip install spacy==2.1.0
+!python -m spacy download en_core_web_sm
+!pip install neuralcoref
+
+import spacy
+import neuralcoref
+
+nlp = spacy.load('en_core_web_sm')
+neuralcoref.add_to_pipe(nlp)
+```
+
+### Use
+
+```python3
+doc = nlp(u'My sister has a dog. She loves him.')
+
+doc._.has_coref  👉  True
+
+doc._.coref_clusters
+👉  [My sister: [My sister, She], a dog: [a dog, him]]
+```
+
+---
+
+# Coreference in spaCy II
+
+### Visual Representation
 
 ![:scale 95%](figures/neuralcoref.png)
 
 
+### Reference
+
+* Neural Coreference - Hugging Face <br>
+[https://huggingface.co/coref/](https://huggingface.co/coref/)
+
 ---
 
-# Mandatory exercise
+# Coreference in Textserver
 
-#### Statement:
+### Requirements
+
+```python3
+from google.colab import drive
+import sys
+drive.mount('/content/drive')
+sys.path.insert(0, '/content/drive/My Drive/Colab Notebooks/plh')
+from textserver import TextServer
+```
+
+### Use
+
+```python3
+ts = TextServer('usuari', 'passwd', 'coreferences')
+
+ts.coreferences("My sister has a dog. She loves him.")
+👉  [['My sister', 'him'], ['a dog', 'She']]
+```
+
+---
+class: left, middle, inverse
+
+# Outline
+
+- .brown[Coreference]
+
+- .cyan[Exercici]
+
+---
+
+# Exercise
 
 * Consider the first paragraph in Alice’s Adventures in Wonderland, by Lewis Carroll:
 ```
@@ -50,6 +120,5 @@ is the use of a book,’ thought Alice ‘without pictures or conversations?’
 * Show the coreference chains. 
 
 * What do you think about them? Justify your answer.
-
 
 

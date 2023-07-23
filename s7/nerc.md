@@ -159,7 +159,7 @@ with doc.retokenize() as retokenizer:
 
 ---
 
-# NERC in TextServer I
+# NERC in TextServer
 
 ### Requirements: [textserver.py](../codes/textserver.py)
 
@@ -187,118 +187,21 @@ ts.entities("Mark Pedersen works at Google since 1994.")
   ['.', '.', 'Fp', 'punctuation', 'N/A', 'N/A']]]
 ```
 
----
-
-# Session requirements
-
-Maximum Entropy Name Entity Chunker & CoNLL corpus:
-
-```python3
-import nltk
-
-nltk.download('maxent_ne_chunker')
-nltk.download('conll2000')
-nltk.download('punkt')
-nltk.download('averaged_perceptron_tagger')
-nltk.download('words')
-
-!pip install svgling
-```
-
-<!--
-
-Stanford CoreNLP:
-* Linux (via shell)
-  - Install [CoreNLP](https://stanfordnlp.github.io/CoreNLP/download.html),
-
-  - and execute CoreNLP server: <br>
-`java -mx4g -cp
-"whole path/stanford-corenlp-full-2017-06-09/*" edu.stanford.nlp.pipeline.StanfordCoreNLPServer -port 9000 -timeout 15000`
-
-  - make sure you have intalled the later java version
-
--->
-
-Attached resources:
-
-[`test-gold.tgz`](../sts/resources/test-gold.tgz)
 
 ---
 class: left, middle, inverse
 
 # Outline
-
-* .brown[Session requirements]
-
-* .cyan[NERC models]
-
-* Paraphrases
-
-* Learning sequences
-
----
-
-# NERC models in NLTK
-
-Default model:
-
-Maximum entropy model (PERSON, LOCATION, ORGZATION) trained with ACE corpus
-
-```python3
-from nltk import ne_chunk
-ne_chunk(POS_tagged_sent, binary=False)
-```
-
-  - `binary: True` is used just to recognize NEs, without
-classifying them into the three NE classes.
-
-  - `Output: tree` format by default. <br>
-Use `nltk.chunk.tree2conllstr(ner_output)` to get CoNLL format.
-
-
-NLTK doesn’t have an English corpus for NERC (CoNLL2002 corpus for Spanish and Dutch).
-
-Example:
-
-* [view](codes/s7a.html) / [download](codes/s7a.ipynb)
-
----
-
-# Other NERC models
-
-## spaCy
-
-* Example: [view](codes/s7b.html) / [download](codes/s7b.ipynb)
-
-* [documentation](https://spacy.io/)
-
-
-## CoreNLP
-
-Third party model: [Stanford CoreNLP server](https://stanfordnlp.github.io/CoreNLP/download.html)
-
-* CRFs and rule models (PER, LOC, ORG, DATE, TIME, MONEY, ...)
-
-* Java server with callable from python
-
----
-class: left, middle, inverse
-
-# Outline
-
-* .brown[Session requirements]
 
 * .brown[NERC models]
 
-* .cyan[Paraphrases]
+* .cyan[Exercise]
 
 * Learning sequences
 
 ---
 
-# Mandatory exercise
-
-Statement:
+# Exercise
 
 1. Read all pairs of sentences of the *SMTeuroparl* files of test set within the
 evaluation framework of the project.
@@ -313,57 +216,158 @@ ex: `word_and_NEs=['John Smith', 'is', 'working']`
 4. Do you think it could be relevant to use NEs to compute the similarity between two sentences?
 Justify the answer.
 
+#### Resources:
+
+- [`test-gold.tgz`](../sts/resources/test-gold.tgz)
+
 ---
 class: left, middle, inverse
 
 # Outline
 
-* .brown[Session requirements]
-
 * .brown[NERC models]
 
-* .brown[Paraphrases]
+* .brown[Exercise]
 
 * .cyan[Learning sequences]
 
 ---
 
-# NLTK RegexpParser
+# RegexpParser de l'NLTK
 
-Example:
+### Example
 
-* [view](codes/s7c.html) / [download](codes/s7c.ipynb)
+```python3
+import nltk    
+!pip install svgling
+import svgling
 
-### Optional exercise
+sentence = [("the", "DT"), ("little", "JJ"), ("yellow", "JJ"),("dog", "NN"),\
+            ("barked", "VBD"), ("at", "IN"), ("the", "DT"), ("cat", "NN")]
 
-Enlarge the previous grammar to parse the next sentence as follows:
+grammar = "NP: {<DT>?<JJ>*<NN>}"
 
+cp = nltk.RegexpParser(grammar)
+cp.parse(sentence)
 ```
-[("the", "DT"), ("little", "JJ"), ("yellow", "JJ"),("dog", "NN"),\
- ("barked", "VBD"), ("at", "IN"), ("the", "DT"), ("cat", "NN"), \
- ("in", "IN"), ("New", "NNP"), ("York", "NNP")]
-```
 
-![:scale 105%](figures/tree.png)
+![:scale 65%](figures/regexpparser.png)
 
 ---
 
-# Conll 2000 Corpus
+# Conll Corpus
 
-Problem: 
+### Requirements
 
-These two sentences have same PoS labels an different chunks.
+```python3
+import nltk
+nltk.download('conll2000')
+from nltk.corpus import conll2000
+```
 
-* `Joey/NN sold/VBD the/DT farmer/NN rice/NN ./.`
+### Use
 
-* `Nick/NN broke/VBD my/DT computer/NN monitor/NN ./.`
+```python3
+test_sents = conll2000.chunked_sents('test.txt', chunk_types=['NP'])
+sentence = conll2000.chunked_sents('train.txt', chunk_types=['NP'])[99]
+sentence
+👉
+```
+![:scale 70%](figures/treeNP.png)
 
-Example:
+---
 
-* Sentences in Conll2000
+# IOB Format 
 
-* Chunking evaluation
+- .blue[In - Out - Begin]
 
-* IOB format
+.cols5050[
+.col1[
+```python3
+from nltk import tree2conlltags
 
-* [view](codes/s7d.html) / [download](codes/s7d.ipynb)
+tree2conlltags(sentence)
+👉
+[('Over', 'IN', 'O'),
+ ('a', 'DT', 'B-NP'),
+ ('cup', 'NN', 'I-NP'),
+ ('of', 'IN', 'O'),
+ ('coffee', 'NN', 'B-NP'),
+ (',', ',', 'O'),
+ ('Mr.', 'NNP', 'B-NP'),
+ ('Stone', 'NNP', 'I-NP'),
+ ('told', 'VBD', 'O'),
+ ('his', 'PRP$', 'B-NP'),
+ ('story', 'NN', 'I-NP'),
+ ('.', '.', 'O')]
+```
+]
+.col2[
+![:scale 50%](figures/bio.png)
+]]
+
+---
+
+# Evaluation
+
+### RegexpParser Example 
+
+```python3
+import nltk
+nltk.download('conll2000')
+from nltk.corpus import conll2000
+
+grammar = "NP: {<DT>?<JJ>*<NN>}"
+cp = nltk.RegexpParser(grammar)
+
+test_sents = conll2000.chunked_sents('test.txt', chunk_types=['NP'])
+print(cp.accuracy(test_sents))
+👉
+ChunkParse score:
+    IOB Accuracy:  59.7%%
+    Precision:     45.3%%
+    Recall:        24.2%%
+    F-Measure:     31.6%%
+```
+
+---
+
+# Conditional Random Fields I
+
+### Example with PoS
+
+```python3
+!pip install python-crfsuite
+from google.colab import drive
+import nltk
+
+nltk.download('treebank')
+train = nltk.corpus.treebank.tagged_sents()[:3000]
+test = nltk.corpus.treebank.tagged_sents()[3000:]
+
+drive.mount('/content/drive')
+model = nltk.tag.CRFTagger()
+model.train(train,'/content/drive/My Drive/models/crfTagger.mdl')
+
+model.accuracy(test)  👉  0.9474638463198791
+```
+
+---
+
+# Conditional Random Fields II
+
+### Use of a model
+
+```python3
+tagger = nltk.tag.CRFTagger()
+tagger.set_model_file('/content/drive/My Drive/models/crfTagger.mdl')
+tagger.tag(['the', 'men', 'attended', 'to', 'the', 'meetings'])
+
+👉  [('the', 'DT'),
+     ('men', 'NNS'),
+     ('attended', 'VBD'),
+     ('to', 'TO'),
+     ('the', 'DT'),
+     ('meetings', 'NNS')]
+```
+
