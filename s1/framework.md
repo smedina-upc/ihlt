@@ -77,8 +77,6 @@ uploaded to [https://raco.fib.upc.edu](https://raco.fib.upc.edu)
 - Clarity and organization
 - Analysis and conclusions
 
-.red[Pendent!!!]
-
 ---
 
 # Topic of the project (STS)
