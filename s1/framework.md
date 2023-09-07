@@ -65,7 +65,7 @@ class: left, middle, inverse
 
 * the project Semantic Textual Similarity (in pairs)
 
-.blue[Grade = 0.4 Project + 0.1  Sessions] <br>
+.blue[Grade = 0.1  Sessions + 0.3 Project + 0.1 Questions (to others groups)] <br>
 (this represents the 50% of the final IHLT grade)
 
 Jupyter notebooks of exercises & projects should be
@@ -73,9 +73,12 @@ uploaded to [https://raco.fib.upc.edu](https://raco.fib.upc.edu)
 
 **Evaluation criteria**:
 
-- Correctness
-- Clarity and organization
-- Analysis and conclusions
+- Code Effectiveness
+- Code Readability and Efficiency
+- Use of NLP Libraries and Resources
+- Analysis and Representation of Results
+- Results (only project)
+- Oral Presentation (only project)
 
 ---
 
