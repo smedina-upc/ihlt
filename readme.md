@@ -6,9 +6,9 @@
 
 - [Framework](s1/index.html)
 
-<!--
-
 - [Document structure](s2/index.html)
+
+<!--
 
 - [Morphology](s3/index.html)
 
