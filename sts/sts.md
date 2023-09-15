@@ -118,10 +118,12 @@ metrics.
 The project evaluation will be:
 
 ```
-ProjectGrade = 0.3 ∗ Result + 
-               0.2 ∗ Presentation + 
-               0.3 ∗ Analysis + 
-               0.2 * Code
+ProjectGrade = 0.1  ∗ Code Effectiveness +
+               0.05 * Code Readability and Efficiency +
+               0.05 * Use of NLP Libraries and Resources +
+               0.4  * Analysis and Representation of Results +
+               0.2  * Results + 
+               0.2  ∗ Oral Presentation
 ```
 
 where the Result will be constrained by rules in next table:
