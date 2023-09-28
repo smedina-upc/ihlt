@@ -153,7 +153,7 @@ with open('/content/drive/My Drive/models/hmmTagger.dill', "rb") as f:
 ```
 TnT = nltk.tag.tnt.TnT()
 TnT.train(train_data)
-TnT.evaluate(test_data) c0.457
+TnT.accuracy(test_data)  👉  0.457
 TnT.tag(['the', 'men', 'attended', 'to', 'the', 'meetings'])  👉  ...
 ```
 
@@ -162,7 +162,7 @@ TnT.tag(['the', 'men', 'attended', 'to', 'the', 'meetings'])  👉  ...
 ```
 PER = nltk.tag.perceptron.PerceptronTagger(load=False)
 PER.train(train_data)
-PER.evaluate(test_data)  👉  0.644
+PER.accuracy(test_data)  👉  0.644
 PER.tag(['the', 'men', 'attended', 'to', 'the', 'meetings'])  👉  ...
 ```
 
@@ -174,7 +174,7 @@ PER.tag(['the', 'men', 'attended', 'to', 'the', 'meetings'])  👉  ...
 
 CRF = nltk.tag.CRFTagger()
 CRF.train(train_data,'crf_tagger_model')
-CRF.evaluate(test_data)  👉  0.685
+CRF.accuracy(test_data)  👉  0.685
 CRF.tag(['the', 'men', 'attended', 'to', 'the', 'meetings'])  👉  ...
 ```
 
