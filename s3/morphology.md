@@ -139,7 +139,7 @@ def lemmatize(p):
 
 ```
 import spacy
-nlp = spacy.load("ca_core_news_sm")
+nlp = spacy.load("en_core_web_sm")
 ```
 
 ### Use
