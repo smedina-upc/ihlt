@@ -12,9 +12,9 @@
 
 - [Part of Speech](s4/index.html)
 
-<!--
-
 - [Lexical Semantics](s5/index.html)
+
+<!--
 
 - [Word Sense Disambiguation](s6/index.html)
 
