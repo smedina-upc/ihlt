@@ -18,13 +18,11 @@
 
 - [Word Sequences](s7/index.html)
 
-<!--
-
 - [Parsing](s8/index.html)
 
 - [Coreference](s9/index.html)
 
-
+<!--
 
 11. Project
 
