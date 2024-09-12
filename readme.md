@@ -54,7 +54,9 @@
 ### Authors
 
 Gerard Escudero
+
 Salvador Medina
+
 Jordi Turmo
 ]
 ]
