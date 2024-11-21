@@ -6,7 +6,7 @@ class: center, middle
 
 ## Semantic Textual Similarity
 
-Gerard Escudero & Jordi Turmo
+Gerard Escudero, Salvador Medina, Jordi Turmo
 
 Natural Language Research Group
 

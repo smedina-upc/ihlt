@@ -4,7 +4,7 @@ class: center, middle
 
 # Lab.7: Word Sequences
 
-Gerard Escudero & Jordi Turmo
+Gerard Escudero, Salvador Medina, Jordi Turmo
 
 Natural Language Research Group
 

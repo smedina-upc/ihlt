@@ -4,7 +4,7 @@ class: center, middle
 
 # Lab Blocks: Text Level
 
-Gerard Escudero
+Gerard Escudero, Salvador Medina, Jordi Turmo
 
 Natural Language Research Group
 

@@ -4,7 +4,8 @@ class: center, middle
 
 # Lab Blocks: Lexical Level
 
-Gerard Escudero
+
+Gerard Escudero, Salvador Medina, Jordi Turmo
 
 Natural Language Research Group
 
