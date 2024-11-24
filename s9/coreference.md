@@ -27,7 +27,7 @@ class: left, middle, inverse
 
 ---
 
-# Coreference in spaCy Experimental (Spacy 3.7)
+# Coreference in spaCy Experimental (I)
 
 ### Requirements
 
@@ -110,7 +110,9 @@ print(doc.spans)
 
 ---
 
-# Coreference in spaCy Plugins (Coreferee)
+# Coreference in spaCy Plugins (I)
+
+## coreferee
 
 ### Requirements
 
@@ -141,9 +143,10 @@ doc._.coref_chains.resolve(doc[31])
 ```
 
 ---
----
 
-# Coreference in spaCy Plugins (Crosslingual-coreference)
+# Coreference in spaCy Plugins
+
+## crosslingual-coreference
 
 ### Requirements
 
@@ -159,6 +162,8 @@ nlp.add_pipe(
     "xx_coref", config={"chunk_size": 2500, "chunk_overlap": 2, "device": 0}
 )
 doc = nlp("Do not forget about Momofuku Ando! He created instant noodles in Osaka. At that location, Nissin was founded. Many students survived by eating these  noodles, but they don't even know him.")
+```
+```python3
 print(doc._.coref_clusters)
 👉  [[[4, 5], [7, 7], [27, 27], [36, 36]], [[12, 12], [15, 16]], [[9, 10], [27, 28]], [[22, 23], [31, 31]]]
 ```
