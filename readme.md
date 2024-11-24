@@ -53,6 +53,11 @@
 
 ### Authors
 
-Gerard Escudero, Salvador Medina, Jordi Turmo
+Gerard Escudero
+
+Salvador Medina
+
+Jordi Turmo
+
 ]
 ]
