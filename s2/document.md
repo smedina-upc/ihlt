@@ -2,7 +2,7 @@ class: center, middle
 
 ### Introduction to Human Language Technologies
 
-# Lab.2: Document structure
+# Lab.2: Document Structure
 
 Gerard Escudero, Salvador Medina, Jordi Turmo
 
@@ -21,13 +21,13 @@ class: left, middle, inverse
 
 # Outline
 
-* .cyan[Textual zones]
+  * .cyan[Extracting Text from Documents]
 
-* Tokenizers
+  * Tokenizers
 
-* Similarities
+  * Similarities
 
-* Exercise
+  * Exercise
 
 ---
 
@@ -80,36 +80,40 @@ class: left, middle, inverse
 
 # Outline
 
-* .brown[Textual zones]
+  * .brown[Extracting Text from Documents]
 
-* .cyan[Tokenizers]
+  * .cyan[Tokenizers]
 
-* Similarities
+  * Similarities
 
-* Exercise
+  * Exercise
 
 ---
 
-# NLTK Tokenizer
+## NLTK Tokenizer
 
 ### Requirements
 
 ```
 import nltk
-nltk.download('punkt')
+nltk.download('punkt_tab')
 ```
 
 ### Sentence Splitting
 
-```
+The `sent_tokenize` function splits a text into a list of sentences.
+
+```python
 nltk.sent_tokenize('Men want children. They get relaxed with kids.')
 
 👉 ['Men want children.', 'They get relaxed with kids.']
 ```
 
-### Tokenizer
+### Word Tokenization
 
-```
+The `word_tokenize` function splits a sentence into words and punctuation.
+
+```python
 nltk.word_tokenize('Men want children.')
 
 👉 ['Men', 'want', 'children', '.']
@@ -121,21 +125,29 @@ nltk.word_tokenize('Men want children.')
 
 ### Requirements
 
-```
+First, load a spaCy model. `en_core_web_sm` is the small English model.
+
+```python
 import spacy
+# Make sure you have the model downloaded:
+# python -m spacy download en_core_web_sm
 nlp = spacy.load('en_core_web_sm')
 ```
 
 ### Text Processing
 
-```
+Processing a text with the `nlp` object creates a `Doc` object.
+
+```python
 doc = nlp('Men want children. They get relaxed with kids.')
 ```
 
 ### Sentence Splitting
 
-```
-[s.text for s in doc.sents]
+You can iterate through the sentences in the `Doc` object using `doc.sents`.
+
+```python
+[sent.text for sent in doc.sents]
 
 👉 ['Men want children.', 'They get relaxed with kids.']
 ```
@@ -144,12 +156,14 @@ doc = nlp('Men want children. They get relaxed with kids.')
 
 # spaCy Tokenizer (II)
 
+### Tokenization and Attributes
 
-### Tokenizer
+Each sentence in a `Doc` can be iterated to get individual `Token` objects, which come with rich linguistic annotations.
 
-```
-s = next(doc.sents)
-[(token.text, token.is_stop) for token in s]
+```python
+first_sentence = next(doc.sents)
+
+[(token.text, token.is_stop) for token in first_sentence]
 
 👉 [('Men', False), 
     ('want', False), 
@@ -159,11 +173,11 @@ s = next(doc.sents)
 
 ---
 
-# Tokenització amb TextServer (FreeLing)
+## Tokenization with TextServer (FreeLing)
 
-### Requeriments
+### Requirements
 
-- Script auxiliar: [textserver.py](../codes/textserver.py)
+This example uses a custom helper script to connect to a FreeLing server. The code below is typical for a Google Colab environment. Script: [textserver.py](../codes/textserver.py)
 
 ```
 from google.colab import drive
@@ -174,9 +188,12 @@ sys.path.insert(0, '/content/drive/My Drive/Colab Notebooks/ihlt')
 from textserver import TextServer
 ```
 
-### Use
+### Usage
 
-```
+Once connected, you can send text to the server for tokenization.
+
+```python
+# Initialize with your user, password, and desired service
 ts = TextServer('user', 'passwd', 'tokenizer') 
 
 ts.tokenizer('Men want children. They get relaxed with kids.')
@@ -189,43 +206,41 @@ class: left, middle, inverse
 
 # Outline
 
-* .brown[Textual zones]
+  * .brown[Extracting Text from Documents]
 
-* .brown[Tokenizers]
+  * .brown[Tokenizers]
 
-* .cyan[Similarities]
+  * .cyan[Similarities]
 
-* Exercise
+  * Exercise
 
 ---
 
-# Similarities
+## Similarity Metrics
 
-Set-oriented methods (similarities between sets of words):
+**Set-oriented methods** measure the similarity between two sets of words.
 
 .cols5050[
 .col1[
-* $S_{dice}(X,Y)=\frac{2\cdot \vert X \cap Y\vert}{\vert X\vert+\vert Y\vert}$
-
-* $S_{jaccard}(X,Y)=\frac{\vert X \cap Y\vert}{\vert X \cup Y\vert}$
+* **Dice Coefficient**
+  * $$S_{dice}(X,Y)=\frac{2 \cdot |X \cap Y|}{|X|+|Y|}$$
+* **Jaccard Similarity**
+  * $$S_{jaccard}(X,Y)=\frac{|X \cap Y|}{|X \cup Y|}$$
 ]
 .col2[
-* $S_{overlap}(X,Y)=\frac{\vert X \cap Y\vert}{min(\vert X\vert,\vert Y\vert)}$
+* **Overlap Coefficient**
+  * $$S_{overlap}(X,Y)=\frac{|X \cap Y|}{min(|X|,|Y|)}$$
+* **Cosine Similarity** (Sets)
+  * $$S_{cosine}(X,Y)=\frac{|X \cap Y|}{\sqrt{|X| \cdot |Y|}}$$
+]
+]
 
-* $S_{cosine}(X,Y)=\frac{\vert X \cap Y\vert}{\sqrt{\vert X\vert\cdot\vert Y\vert}}$
-]]
+These similarity scores are all in the range $[0, 1]$. You can convert any of them into a **distance metric** by subtracting it from 1: $D = 1 - S$.
 
-Above similarities are in [0, 1] and can be used as distances simply
-subtracting: $D = 1 − S$.
-
-### Example: 
-
-```
-from nltk.metrics import jaccard_distance
-
-jaccard_distance(set(['The','eats','fish','.']),
-                 set(['The','eats','blue','fish','.']))
-
+#### Example with NLTK
+```python
+from nltk.metrics.distance import jaccard_distance
+jaccard_distance(set(['The','eats','fish','.']), set(['The','eats','blue','fish','.']))
 👉  0.2
 ```
 
@@ -234,13 +249,13 @@ class: left, middle, inverse
 
 # Outline
 
-* .brown[Textual zones]
+  * .brown[Extracting Text from Documents]
 
-* .brown[Tokenizers]
+  * .brown[Tokenizers]
 
-* .brown[Similarities]
+  * .brown[Similarities]
 
-* .cyan[Exercise]
+  * .cyan[Exercise]
 
 ---
 
