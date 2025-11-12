@@ -37,9 +37,9 @@ Maximum Entropy Model (PERSON, LOCATION, ORGANIZATION)
 
 ```python3
 import nltk
-nltk.download('punkt')
-nltk.download('averaged_perceptron_tagger')
-nltk.download('maxent_ne_chunker')
+nltk.download('punkt_tab')
+nltk.download('averaged_perceptron_tagger_eng')
+nltk.download('maxent_ne_chunker_tab')
 nltk.download('words')
 ```
 
@@ -233,7 +233,7 @@ class: left, middle, inverse
 
 ---
 
-# RegexpParser de l'NLTK
+# NLTK's RegexpParser
 
 ### Example
 
