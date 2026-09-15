@@ -145,12 +145,12 @@ nlp = spacy.load("en_core_web_sm")
 ### Use
 
 ```
-doc = nlp("The boy play with a black dog.")
+doc = nlp("The boy plays with a black dog.")
 [(token.text, token.pos_, token.lemma_, token.is_stop) for token in doc]
 
 👉 [('The', 'DET', 'the', True),
     ('boy', 'NOUN', 'boy', False),
-    ('play', 'VERB', 'play', False),
+    ('plays', 'VERB', 'play', False),
     ('with', 'ADP', 'with', True),
     ('a', 'DET', 'a', True),
     ('black', 'ADJ', 'black', False),
@@ -180,11 +180,11 @@ from textserver import TextServer
 ```
 ts = TextServer('usuari', 'passwd', 'morpho') 
 
-ts.morpho("The boy play with a black dog.")
+ts.morpho("The boy plays with a black dog.")
 👉  
 [[['The', 'the', 'DT', 'determiner'],
   ['boy', 'boy', 'NN', 'noun'],
-  ['play', 'play', 'VB', 'verb'],
+  ['plays', 'play', 'VBZ', 'verb'],
   ['with', 'with', 'IN', 'preposition'],
   ['a', 'a', 'DT', 'determiner'],
   ['black', 'black', 'JJ', 'adjective'],
