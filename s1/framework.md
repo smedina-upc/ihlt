@@ -113,8 +113,7 @@ sentence similarity metrics.
 * Compare and comment the results achieved by these approaches
 among them and among the official results.
 
-* Use data set and description of task Semantic Textual Similarity in SemEval 2012: <br>
-~~[https://www.cs.york.ac.uk/semeval-2012/task6/index.html](https://www.cs.york.ac.uk/semeval-2012/task6/index.html)~~
+* Use data set and description of [task Semantic Textual Similarity in SemEval 2012](https://aclanthology.org/S12-1051/)
 
 * Deliver to raco:
   - Jupyter notebook: sts-[Student1]-[Student2].ipynb
