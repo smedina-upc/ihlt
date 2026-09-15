@@ -6,29 +6,49 @@
   <link rel="stylesheet" href="estils.css">
 </head>
 <body>
-  <script src="https://remarkjs.com/downloads/remark-latest.min.js" type="text/javascript"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured" type="text/javascript"></script>
+
+  <script src="https://remarkjs.com/downloads/remark-latest.min.js"
+          type="text/javascript"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured"
+          type="text/javascript"></script>
+
   <script type="text/javascript">
+
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+        inlineMath: [['$', '$']],
+        displayMath: [['$$', '$$']]
+      }
+    });
+
     var slideshow = remark.create({
       sourceUrl: "document.md",
       highlightStyle: 'default',
       highlightLanguage: 'python3'
     });
-    //remark macros
+
+    // remark macros
     remark.macros.scale = function (percentage) {
       var url = this;
       return '<img src="' + url + '" style="width: ' + percentage + '" />';
     };
 
-    // Setup MathJax
-    window.MathJax.Hub.Config({
-      tex2jax: {
-        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
-        inlineMath: [['$','$']],
-        displayMath: [['$$', '$$']],
+    // Typeset equations after Remark has created/shown the slide
+    slideshow.on('afterShowSlide', function () {
+      var slide = document.querySelector('.remark-visible');
+      if (slide) {
+        MathJax.Hub.Queue(["Typeset", MathJax.Hub, slide]);
       }
     });
+
     MathJax.Hub.Configured();
+
   </script>
+
 </body>
 </html>
+
+
+
