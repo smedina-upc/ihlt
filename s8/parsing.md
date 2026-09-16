@@ -544,16 +544,24 @@ ts.dependencies('The boy plays with a black dog.')
 👉
 [{'function': 'ROOT',
   'word': 'plays',
-  'children': [{'function': 'SBJ',
-    'word': 'boy',
-    'children': [{'function': 'NMOD', 'word': 'The'}]},
-   {'function': 'ADV',
-    'word': 'with',
-    'children': [{'function': 'PMOD',
-      'word': 'dog',
-      'children': [{'function': 'NMOD', 'word': 'a'},
-       {'function': 'NMOD', 'word': 'black'}]}]},
-   {'function': 'P', 'word': '.'}]}]
+  'children':
+      [{'function': 'SBJ',
+        'word': 'boy',
+        'children':
+            [{'function': 'NMOD', 'word': 'The'}]
+       },
+       {'function': 'ADV',
+        'word': 'with',
+        'children':
+            [{'function': 'PMOD',
+              'word': 'dog',
+              'children':
+                  [{'function': 'NMOD', 'word': 'a'},
+                   {'function': 'NMOD', 'word': 'black'}]
+             }]
+       },
+       {'function': 'P', 'word': '.'}]
+}]
 ```
 
 ---
