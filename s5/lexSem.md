@@ -291,6 +291,8 @@ class: left, middle, inverse
 (’the’,’DT’), (’man’,’NN’), (’swim’,’VB’), (’with’, ’PR’), (’a’, ’DT’),
 (’girl’,’NN’), (’and’, ’CC’), (’a’, ’DT’), (’boy’, ’NN’), (’whilst’, ’PR’),
 (’the’, ’DT’), (’woman’, ’NN’), (’walk’, ’VB’)
+(’the’,’DT’), (’dog’,’NN’), (’run’,’VB’), (’after’, ’PR’), (’a’, ’DT’),
+(’cat’,’NN’)
 ```
 * For each pair, when possible, print their most frequent WordNet synset
 
