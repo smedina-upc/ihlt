@@ -219,7 +219,7 @@ is the use of a book,’ thought Alice ‘without pictures or conversations?’
 * It can be downloaded from: <br>
 [http://www.gutenberg.org/files/11/11-0.txt](http://www.gutenberg.org/files/11/11-0.txt)
 
-* Apply the spaCy coreference solver to the previous paragraph.
+* Apply one coreference solver to the previous paragraph.
 
 * Show the coreference chains. 
 
