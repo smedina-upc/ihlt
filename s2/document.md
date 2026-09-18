@@ -240,7 +240,8 @@ These similarity scores are all in the range $[0, 1]$. You can convert any of th
 #### Example with NLTK
 ```python
 from nltk.metrics.distance import jaccard_distance
-jaccard_distance(set(['The','eats','fish','.']), set(['The','eats','blue','fish','.']))
+jaccard_distance(set(['The','cat','eats','fish','.']), 
+                 set(['The','cat','eats','blue','fish','.']))
 👉  0.2
 ```
 
