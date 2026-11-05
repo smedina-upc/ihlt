@@ -238,29 +238,6 @@ class: left, middle, inverse
 
 ---
 
-
-# NLTK's RegexpParser  
-
-### Example  
-
-```python3  
-import nltk  
-!pip install svgling  
-import svgling  
-
-sentence = [("the", "DT"), ("little", "JJ"), ("yellow", "JJ"),("dog", "NN"),\  
-            ("barked", "VBD"), ("at", "IN"), ("the", "DT"), ("cat", "NN")]  
-
-grammar = "NP: {<DT>?<JJ>*<NN>}"  
-
-cp = nltk.RegexpParser(grammar)  
-cp.parse(sentence)  
-```  
-
-![:scale 65%](figures/regexpparser.png)  
-
----  
-
 # Conll Corpus
 
 ### Requirements
@@ -280,7 +257,6 @@ sentence
 👉
 ```
 ![:scale 70%](figures/treeNP.png)
-
 
 ---
 
@@ -313,6 +289,28 @@ tree2conlltags(sentence)
 ![:scale 50%](figures/bio.png)
 ]]
 
+
+---
+
+# NLTK's RegexpParser
+
+### Example
+
+```python3
+import nltk    
+!pip install svgling
+import svgling
+
+sentence = [("the", "DT"), ("little", "JJ"), ("yellow", "JJ"),("dog", "NN"),\
+            ("barked", "VBD"), ("at", "IN"), ("the", "DT"), ("cat", "NN")]
+
+grammar = "NP: {<DT>?<JJ>*<NN>}"
+
+cp = nltk.RegexpParser(grammar)
+cp.parse(sentence)
+```
+
+![:scale 65%](figures/regexpparser.png)
 
 ---
 
