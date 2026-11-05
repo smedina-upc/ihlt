@@ -312,6 +312,7 @@ cp.parse(sentence)
 
 ![:scale 65%](figures/regexpparser.png)
 
+
 ---
 
 # Evaluation
