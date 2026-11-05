@@ -238,6 +238,7 @@ class: left, middle, inverse
 
 ---
 
+
 <!--  # NLTK's RegexpParser  -->
 <!--  -->
 <!--  ### Example  -->
@@ -313,7 +314,8 @@ tree2conlltags(sentence)
 ]]
 
 
-<!--  --- -->
+---
+
 <!--  -->
 <!--  # Evaluation-->
 <!--  -->
