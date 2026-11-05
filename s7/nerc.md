@@ -187,7 +187,6 @@ ts.entities("Mark Pedersen works at Google since 1994.")
   ['.', '.', 'Fp', 'punctuation', 'N/A', 'N/A']]]
 ```
 
-
 ---
 class: left, middle, inverse
 
@@ -218,7 +217,6 @@ ex4: `word_and_NEs=['John_Smith:PERSON', 'be:0235236-v', 'work:09345245-v']`
 
 3. Report and discuss results.
    When do you think it could be relevant/useful to use NEs to compute the similarity between two sentences?
-
 
 
 #### Resources:
@@ -289,7 +287,6 @@ tree2conlltags(sentence)
 ![:scale 50%](figures/bio.png)
 ]]
 
-
 ---
 
 # NLTK's RegexpParser
@@ -311,7 +308,6 @@ cp.parse(sentence)
 ```
 
 ![:scale 65%](figures/regexpparser.png)
-
 
 ---
 
