@@ -219,6 +219,8 @@ ex1: `word_and_NEs=['John_Smith:PERSON', 'be:0235236-v', 'work:09345245-v']`
 3. Report and discuss results.
    When do you think it could be relevant/useful to use NEs to compute the similarity between two sentences?
 
+
+
 #### Resources:
 
 - [`test-gold.tgz`](../sts/resources/test-gold.tgz)
@@ -309,6 +311,8 @@ tree2conlltags(sentence)
 ![:scale 50%](figures/bio.png)
 ]]
 
+
+<!--
 ---
 
 # Evaluation
@@ -374,3 +378,4 @@ tagger.tag(['the', 'men', 'attended', 'to', 'the', 'meetings'])
      ('meetings', 'NNS')]
 ```
 
+-->
