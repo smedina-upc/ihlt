@@ -209,11 +209,11 @@ evaluation framework of the project.
 2. Compute their similarities by considering the following approach:
 
   * words plus NEs and Jaccard coefficient <br>
-ex1: `word_and_NEs=['John Smith', 'is', 'working']`
+ex1: `word_and_NEs=['John Smith', 'is', 'working']`<br>
 ex2: `word_and_NEs=['John:PERSON', 'is', 'working', 'in', 'Barcelona:LOCATION']`
 
   * You can experiment with different feature combinations<br>
-ex1: `word_and_NEs=['John_Smith:PERSON', 'is:WORD', 'be:LEMMA', 'working:WORD', 'work:LEMMA']`
+ex1: `word_and_NEs=['John_Smith:PERSON', 'is:WORD', 'be:LEMMA', 'working:WORD', 'work:LEMMA']` <br>
 ex1: `word_and_NEs=['John_Smith:PERSON', 'be:0235236-v', 'work:09345245-v']`
 
 3. Report and discuss results.
