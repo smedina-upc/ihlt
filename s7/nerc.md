@@ -280,6 +280,7 @@ sentence
 ```
 ![:scale 70%](figures/treeNP.png)
 
+
 ---
 
 # IOB Format 
