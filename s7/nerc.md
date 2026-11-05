@@ -256,7 +256,7 @@ sentence = conll2000.chunked_sents('train.txt', chunk_types=['NP'])[99]
 sentence
 👉
 ```
-![:scale 70%](figures/treeNP.png)
+![:scale 60%](figures/treeNP.png)
 
 ---
 
