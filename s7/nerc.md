@@ -239,26 +239,26 @@ class: left, middle, inverse
 ---
 
 <!--  # NLTK's RegexpParser  -->
-<!--[//]:  -->
-<!--[//]:  ### Example  -->
-<!--[//]:  -->
-<!--[//]:  ```python3  -->
-<!--[//]:  import nltk  -->
-<!--[//]:  !pip install svgling  -->
-<!--[//]:  import svgling  -->
-<!--[//]:  -->
-<!--[//]:  sentence = [("the", "DT"), ("little", "JJ"), ("yellow", "JJ"),("dog", "NN"),\  -->
-<!--[//]:              ("barked", "VBD"), ("at", "IN"), ("the", "DT"), ("cat", "NN")]  -->
-<!--[//]:  -->
-<!--[//]:  grammar = "NP: {<DT>?<JJ>*<NN>}"  -->
-<!--[//]:  -->
-<!--[//]:  cp = nltk.RegexpParser(grammar)  -->
-<!--[//]:  cp.parse(sentence)  -->
-<!--[//]:  ```  -->
-<!--[//]:  -->
-<!--[//]:  ![:scale 65%](figures/regexpparser.png)  -->
-<!--[//]:  -->
-<!--[//]:  ---  -->
+<!--  -->
+<!--  ### Example  -->
+<!--  -->
+<!--  ```python3  -->
+<!--  import nltk  -->
+<!--  !pip install svgling  -->
+<!--  import svgling  -->
+<!--  -->
+<!--  sentence = [("the", "DT"), ("little", "JJ"), ("yellow", "JJ"),("dog", "NN"),\  -->
+<!--              ("barked", "VBD"), ("at", "IN"), ("the", "DT"), ("cat", "NN")]  -->
+<!--  -->
+<!--  grammar = "NP: {<DT>?<JJ>*<NN>}"  -->
+<!--  -->
+<!--  cp = nltk.RegexpParser(grammar)  -->
+<!--  cp.parse(sentence)  -->
+<!--  ```  -->
+<!--  -->
+<!--  ![:scale 65%](figures/regexpparser.png)  -->
+<!--  -->
+<!--  ---  -->
 
 # Conll Corpus
 
@@ -312,68 +312,67 @@ tree2conlltags(sentence)
 ]]
 
 
-[//]:  ---
-[//]:  
-[//]:  # Evaluation
-[//]:  
-[//]:  ### RegexpParser Example 
-[//]:  
-[//]:  ```python3
-[//]:  import nltk
-[//]:  nltk.download('conll2000')
-[//]:  from nltk.corpus import conll2000
-[//]:  
-[//]:  grammar = "NP: {<DT>?<JJ>*<NN>}"
-[//]:  cp = nltk.RegexpParser(grammar)
-[//]:  
-[//]:  test_sents = conll2000.chunked_sents('test.txt', chunk_types=['NP'])
-[//]:  print(cp.accuracy(test_sents))
-[//]:  👉
-[//]:  ChunkParse score:
-[//]:      IOB Accuracy:  59.7%%
-[//]:      Precision:     45.3%%
-[//]:      Recall:        24.2%%
-[//]:      F-Measure:     31.6%%
-[//]:  ```
-[//]:  
-[//]:  ---
-[//]:  
-[//]:  # Conditional Random Fields I
-[//]:  
-[//]:  ### Example with PoS
-[//]:  
-[//]:  ```python3
-[//]:  !pip install python-crfsuite
-[//]:  from google.colab import drive
-[//]:  import nltk
-[//]:  
-[//]:  nltk.download('treebank')
-[//]:  train = nltk.corpus.treebank.tagged_sents()[:3000]
-[//]:  test = nltk.corpus.treebank.tagged_sents()[3000:]
-[//]:  
-[//]:  drive.mount('/content/drive')
-[//]:  model = nltk.tag.CRFTagger()
-[//]:  model.train(train,'/content/drive/My Drive/models/crfTagger.mdl')
-[//]:  
-[//]:  model.accuracy(test)  👉  0.9474638463198791
-[//]:  ```
-[//]:  
-[//]:  ---
-[//]:  
-[//]:  # Conditional Random Fields II
-[//]:  
-[//]:  ### Use of a model
-[//]:  
-[//]:  ```python3
-[//]:  tagger = nltk.tag.CRFTagger()
-[//]:  tagger.set_model_file('/content/drive/My Drive/models/crfTagger.mdl')
-[//]:  tagger.tag(['the', 'men', 'attended', 'to', 'the', 'meetings'])
-[//]:  
-[//]:  👉  [('the', 'DT'),
-[//]:       ('men', 'NNS'),
-[//]:       ('attended', 'VBD'),
-[//]:       ('to', 'TO'),
-[//]:       ('the', 'DT'),
-[//]:       ('meetings', 'NNS')]
-[//]:  ```
-
+<!--  --- -->
+<!--  -->
+<!--  # Evaluation-->
+<!--  -->
+<!--  ### RegexpParser Example -->
+<!--  -->
+<!--  ```python3-->
+<!--  import nltk-->
+<!--  nltk.download('conll2000')-->
+<!--  from nltk.corpus import conll2000-->
+<!--  -->
+<!--  grammar = "NP: {<DT>?<JJ>*<NN>}"-->
+<!--  cp = nltk.RegexpParser(grammar)-->
+<!--  -->
+<!--  test_sents = conll2000.chunked_sents('test.txt', chunk_types=['NP'])-->
+<!--  print(cp.accuracy(test_sents))-->
+<!--  👉-->
+<!--  ChunkParse score:-->
+<!--      IOB Accuracy:  59.7%%-->
+<!--      Precision:     45.3%%-->
+<!--      Recall:        24.2%%-->
+<!--      F-Measure:     31.6%%-->
+<!--  ```-->
+<!--  -->
+<!--  --- -->
+<!--  -->
+<!--  # Conditional Random Fields I-->
+<!--  -->
+<!--  ### Example with PoS-->
+<!--  -->
+<!--  ```python3-->
+<!--  !pip install python-crfsuite-->
+<!--  from google.colab import drive-->
+<!--  import nltk-->
+<!--  -->
+<!--  nltk.download('treebank')-->
+<!--  train = nltk.corpus.treebank.tagged_sents()[:3000]-->
+<!--  test = nltk.corpus.treebank.tagged_sents()[3000:]-->
+<!--  -->
+<!--  drive.mount('/content/drive')-->
+<!--  model = nltk.tag.CRFTagger()-->
+<!--  model.train(train,'/content/drive/My Drive/models/crfTagger.mdl')-->
+<!--  -->
+<!--  model.accuracy(test)  👉  0.9474638463198791-->
+<!--  ```-->
+<!--  -->
+<!--  --- -->
+<!--  -->
+<!--  # Conditional Random Fields II-->
+<!--  -->
+<!--  ### Use of a model-->
+<!--  -->
+<!--  ```python3-->
+<!--  tagger = nltk.tag.CRFTagger()-->
+<!--  tagger.set_model_file('/content/drive/My Drive/models/crfTagger.mdl')-->
+<!--  tagger.tag(['the', 'men', 'attended', 'to', 'the', 'meetings'])-->
+<!--  -->
+<!--  👉  [('the', 'DT'),-->
+<!--       ('men', 'NNS'),-->
+<!--       ('attended', 'VBD'),-->
+<!--       ('to', 'TO'),-->
+<!--       ('the', 'DT'),-->
+<!--       ('meetings', 'NNS')]-->
+<!--  ``` -->
