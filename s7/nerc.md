@@ -209,12 +209,15 @@ evaluation framework of the project.
 2. Compute their similarities by considering the following approach:
 
   * words plus NEs and Jaccard coefficient <br>
-ex: `word_and_NEs=['John Smith', 'is', 'working']`
+ex1: `word_and_NEs=['John Smith', 'is', 'working']`
+ex2: `word_and_NEs=['John:PERSON', 'is', 'working', 'in', 'Barcelona:LOCATION']`
 
-3. Show the results. 
+  * You can experiment with different feature combinations<br>
+ex1: `word_and_NEs=['John_Smith:PERSON', 'is:WORD', 'be:LEMMA', 'working:WORD', 'work:LEMMA']`
+ex1: `word_and_NEs=['John_Smith:PERSON', 'be:0235236-v', 'work:09345245-v']`
 
-4. Do you think it could be relevant to use NEs to compute the similarity between two sentences?
-Justify the answer.
+3. Report and discuss results.
+   When do you think it could be relevant/useful to use NEs to compute the similarity between two sentences?
 
 #### Resources:
 
