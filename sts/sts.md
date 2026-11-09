@@ -180,3 +180,24 @@ where the Result will be constrained by rules in next table:
 - [32-fbk](docs/32-fbk.pdf)
 ]]
 
+
+---
+
+## Strategies
+
+### Explore diferent sentence representations:
+   - sets of Lexical, syntactic, semantic features
+   - vectors of different distances over different feature sets
+   - combinations of both
+   - ... etc.
+
+### Explore different similarity measures
+   - plain set measures (jaccard, dice, etc)
+   - mixture of measures (average, weighted average, etc)
+   - learned models:
+       - Use ML to learn weights for weighted average
+       - Use ML to predict a score directly from the features
+       - Use ML to predict a score from a vector of distances
+       - ... etc.
+
+
