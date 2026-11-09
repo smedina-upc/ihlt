@@ -200,4 +200,3 @@ where the Result will be constrained by rules in next table:
     - Use ML to predict a score from a vector of distances
     - ... etc.
 
-
