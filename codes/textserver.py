@@ -14,35 +14,33 @@ tokens = lambda s: [t['form'] for t in s['tokens']]
 flatten = lambda l: reduce(lambda x, y: x + y, l, [])
 
 class TextServer:
-  def __init__(self, user, pwd, service='morpho'):
-    self.service = service
+  def __init__(self, user, pwd, language='en'):
     self.request_data = {
       'username':user,
       'password':pwd,
-      'language': 'en',
+      'language': language,
       'output': 'json',
       'interactive':'1' 
     }
 
-  def query(self, text):
-    url = "http://frodo.lsi.upc.edu:8080/TextWS/textservlet/ws/processQuery/"+self.service
+  def query(self, text, service="morpho"):
+    url = "http://frodo.lsi.upc.edu:8080/TextWS/textservlet/ws/processQuery/"+service
     self.request_data['text_input'] = text
     resp = requests.post(url, files=self.request_data)
     if resp.status_code != requests.codes.ok : 
+      print("\n",resp.text,"\n")
       resp.raise_for_status()
     return resp.text
 
   def tokenizer(self, text):
-    self.service = 'tokenizer'
-    ctnt = self.query(text)
+    ctnt = self.query(text,'tokenizer')
     return list(map(tokens, sents(pars(load(ctnt))[0])))
 
   def morpho(self, text, pandas=False):
     def cols(t):
       return [t['form'],t['lemma'],t['tag'],t['pos']]
       
-    self.service = 'morpho'
-    ctnt = self.query(text)
+    ctnt = self.query(text, 'morpho')
     if pandas:
       dt = list(map(lambda s: info(s, cols), sents(pars(load(ctnt))[0])))
       return pd.DataFrame(flatten(dt), columns=['forma', 'lema', 'tag', 'pos'])
@@ -55,8 +53,7 @@ class TextServer:
       l += [t['wn']] if 'wn' in t else ['N/A']
       return l
         
-    self.service = 'senses'
-    ctnt = self.query(text)
+    ctnt = self.query(text, 'senses')
     if pandas:
       dt = list(map(lambda s: info(s, cols), sents(pars(load(ctnt))[0])))
       return pd.DataFrame(flatten(dt), columns=['forma', 'lema', 'tag', 'pos', 'synset'])
@@ -70,8 +67,7 @@ class TextServer:
       l += [t['neclass']] if 'neclass' in t else ['N/A']
       return l
         
-    self.service = 'entities'
-    ctnt = self.query(text)
+    ctnt = self.query(text, 'entities')
     if pandas:
       dt = list(map(lambda s: info(s, cols), sents(pars(load(ctnt))[0])))
       return pd.DataFrame(flatten(dt), columns=['forma', 'lema', 'tag', 'pos', 'synset', 'neclass'])
@@ -89,14 +85,11 @@ class TextServer:
             res[k] = list(map(filtre,d[k]))
       return res
         
-    self.service = 'dependencies'
-    ctnt = self.query(text)
+    ctnt = self.query(text, 'dependencies')
     deps = [x[0] for x in map(lambda x: x['dependencies'], sents(pars(load(ctnt))[0]))]
     return list(map(filtre, deps))
 
   def coreferences(self, text, pandas=False):
-    self.service = 'coreferences'
-    self.request_data['language'] = 'en'
-    ctnt = self.query(text)
+    ctnt = self.query(text, 'coreferences')
     return [[c['words'] for c in x['mentions']] for x in load(ctnt)['coreferences']]
       

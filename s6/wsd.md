@@ -85,7 +85,7 @@ from textserver import TextServer
 ### Use
 
 ```
-ts = TextServer('usuari', 'passwd', 'senses') 
+ts = TextServer('usuari', 'passwd') 
 ts.senses("The boy plays with a black dog.")
 👉
 [[['The', 'the', 'DT', 'determiner', 'N/A'],

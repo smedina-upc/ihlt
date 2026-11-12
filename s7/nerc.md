@@ -175,7 +175,7 @@ from textserver import TextServer
 ### Use:
 
 ```python3
-ts = TextServer('user', 'passwd', 'entities')
+ts = TextServer('user', 'passwd')
 ts.entities("Mark Pedersen works at Google since 1994.")
 👉
 [[['Mark_Pedersen', 'mark_pedersen', 'NP00SP0', 'noun', 'N/A', 'person'],

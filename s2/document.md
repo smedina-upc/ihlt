@@ -194,7 +194,7 @@ Once connected, you can send text to the server for tokenization.
 
 ```python
 # Initialize with your user, password, and desired service
-ts = TextServer('user', 'passwd', 'tokenizer') 
+ts = TextServer('user', 'passwd') 
 
 ts.tokenizer('Men want children. They get relaxed with kids.')
 👉  [['Men', 'want', 'children', '.'],

@@ -538,7 +538,7 @@ from textserver import TextServer
 ### Use
 
 ```python3
-ts = TextServer('user', 'passwd', 'dependencies')
+ts = TextServer('user', 'passwd')
 
 ts.dependencies('The boy plays with a black dog.')
 👉

@@ -178,7 +178,7 @@ from textserver import TextServer
 ### Use
 
 ```
-ts = TextServer('usuari', 'passwd', 'morpho') 
+ts = TextServer('usuari', 'passwd') 
 
 ts.morpho("The boy plays with a black dog.")
 👉  
