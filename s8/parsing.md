@@ -103,7 +103,7 @@ parse = parser.chart_parse(['small', 'cats', 'and', 'mice'])
 
 # Charts II
 
-<pre style="font-size: 9px; line-height: 1.1; overflow-x: auto;">
+<pre style="font-size: 10px; line-height: 1.1; overflow-x: auto;">
 |.  small  .   cats  .   and   .   mice  .|
 |[---------]         .         .         .| [0:1] 'small'
 |.         [---------]         .         .| [1:2] 'cats'
@@ -149,6 +149,9 @@ parse.num_edges()
 
 parse.edges()
 👉
+```
+
+<pre style="font-size: 10px; line-height: 1.1; overflow-x: auto;">
 [[Edge: [0:1] 'small'],
  [Edge: [1:2] 'cats'],
  [Edge: [2:3] 'and'],
@@ -177,7 +180,7 @@ parse.edges()
  [Edge: [3:4] NP -> NP * CC NP],
  [Edge: [0:4] NP -> NP CC NP *],
  [Edge: [1:4] NP -> NP CC NP *]]
-```
+</pre>
 
 ---
 
