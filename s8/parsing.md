@@ -103,7 +103,7 @@ parse = parser.chart_parse(['small', 'cats', 'and', 'mice'])
 
 # Charts II
 
-```
+<pre style="font-size: 9px; line-height: 1.1; overflow-x: auto;">
 |.  small  .   cats  .   and   .   mice  .|
 |[---------]         .         .         .| [0:1] 'small'
 |.         [---------]         .         .| [1:2] 'cats'
@@ -135,7 +135,7 @@ parse = parser.chart_parse(['small', 'cats', 'and', 'mice'])
 |.         [-----------------------------]| [1:4] NP -> NP CC NP *
 |.         [----------------------------->| [1:4] NP -> NP * CC NP
 |[--------------------------------------->| [0:4] NP -> NP * CC NP
-```
+</pre>
 
 ---
 
