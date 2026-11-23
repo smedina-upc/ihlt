@@ -36,11 +36,11 @@ class TextServer:
     ctnt = self.query(text,'tokenizer')
     return list(map(tokens, sents(pars(load(ctnt))[0])))
 
-  def morpho(self, text, pandas=False):
+  def tagger(self, text, pandas=False):
     def cols(t):
       return [t['form'],t['lemma'],t['tag'],t['pos']]
       
-    ctnt = self.query(text, 'morpho')
+    ctnt = self.query(text, 'tagger')
     if pandas:
       dt = list(map(lambda s: info(s, cols), sents(pars(load(ctnt))[0])))
       return pd.DataFrame(flatten(dt), columns=['forma', 'lema', 'tag', 'pos'])

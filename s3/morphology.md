@@ -180,7 +180,7 @@ from textserver import TextServer
 ```
 ts = TextServer('usuari', 'passwd') 
 
-ts.morpho("The boy plays with a black dog.")
+ts.tagger("The boy plays with a black dog.")
 👉  
 [[['The', 'the', 'DT', 'determiner'],
   ['boy', 'boy', 'NN', 'noun'],
