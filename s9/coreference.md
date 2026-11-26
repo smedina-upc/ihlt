@@ -114,13 +114,10 @@ print(doc.spans)
 
 ## coreferee
 
-### Requirements
-
 ```python3
 !python3 -m pip install coreferee
 !python3 -m coreferee install en
 ```
-
 ### Use
 
 ```python3
@@ -193,6 +190,10 @@ ts = TextServer('usuari', 'passwd', 'coreferences')
 
 ts.coreferences("My sister has a dog. She loves him.")
 👉  [['My sister', 'him'], ['a dog', 'She']]
+
+ts.coreferences("Although he was very busy with his work, Peter had had enough of it. He and his wife decided they needed a holiday. They travelled to Spain because they loved the country very much.")
+👉  [['he', 'his'], ['Peter', 'He', 'his'], ['He and his wife', 'they', 'They', 'they']]
+
 ```
 
 ---
